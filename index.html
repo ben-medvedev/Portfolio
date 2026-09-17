@@ -1,0 +1,2776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio de Benjamin MEDVEDEV, étudiant en BTS SIO SISR">
+<title>Portfolio - Benjamin MEDVEDEV | BTS SIO SISR</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=VT323&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ============================================
+   PORTFOLIO ULTIMATE v3.0 - Benjamin MEDVEDEV
+   No limits. Pure creativity.
+   BTS SIO SISR @ CNED 2025-2026
+   ============================================ */
+
+:root {
+--primary: #00ff88;
+--secondary: #00d4ff;
+--accent: #ff6b6b;
+--warning: #ffa502;
+--dark: #0a0a0a;
+--dark-light: #1a1a1a;
+--bg: #050505;
+--text: #e0e0e0;
+--card-bg: #1e1e1e;
+--border-color: rgba(0, 255, 136, 0.3);
+--gradient-1: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+--gradient-2: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+--gradient-3: linear-gradient(135deg, #ff6b6b 0%, #ffa502 100%);
+}
+
+body.light-mode {
+--bg: #f0f4f8;
+--text: #1a1a2e;
+--card-bg: #ffffff;
+--dark: #1a1a2e;
+--dark-light: #e8ecf1;
+--border-color: rgba(0, 100, 80, 0.3);
+--primary: #00aa66;
+--secondary: #0088cc;
+}
+
+body.light-mode header { background: rgba(240, 244, 248, 0.95); border-bottom: 2px solid var(--primary); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+body.light-mode .nav-links a { color: var(--text); }
+body.light-mode .nav-links a:hover, body.light-mode .nav-links a.active { color: var(--primary); border: 1px solid var(--primary); background: rgba(0, 170, 102, 0.1); box-shadow: none; }
+body.light-mode #accueil { background: var(--dark-light); }
+body.light-mode .hero-content h1, body.light-mode .hero-content h2 { color: var(--primary); text-shadow: none; }
+body.light-mode .hero-content p { color: var(--text); }
+body.light-mode section { background: var(--card-bg); border: 1px solid var(--border-color); }
+body.light-mode .section-title { color: var(--primary); text-shadow: none; }
+body.light-mode .skill-card, body.light-mode .project-card, body.light-mode .timeline-content, body.light-mode .veille-card, body.light-mode .outil-card, body.light-mode .methodologie, body.light-mode .contact-info, body.light-mode .contact-form, body.light-mode .stat-card, body.light-mode .filter-btn { background: var(--card-bg); color: var(--text); border: 1px solid var(--border-color); }
+body.light-mode .skill-card:hover, body.light-mode .project-card:hover { box-shadow: 0 5px 20px rgba(0, 170, 102, 0.2); }
+body.light-mode .veille-description, body.light-mode .outil-card p, body.light-mode .method-step p { color: #555; }
+body.light-mode .veille-tag, body.light-mode .tag { background: rgba(0, 170, 102, 0.15); color: var(--primary); border: 1px solid var(--primary); }
+body.light-mode .timeline-date { background: rgba(0, 170, 102, 0.2); color: var(--primary); border: 1px solid var(--primary); }
+body.light-mode .contact-item { background: rgba(0, 170, 102, 0.05); border-left: 3px solid var(--primary); }
+body.light-mode .contact-item i { background: var(--card-bg); color: var(--primary); border: 1px solid var(--primary); }
+body.light-mode .form-group input, body.light-mode .form-group textarea { background: var(--bg); border: 1px solid var(--border-color); color: var(--text); }
+body.light-mode .form-group label { color: var(--text); }
+body.light-mode footer { background: var(--dark); border-top: 3px solid var(--primary); }
+body.light-mode .social-links a { border: 1px solid var(--primary); color: var(--primary); }
+body.light-mode .social-links a:hover { background: var(--primary); color: var(--dark); }
+body.light-mode .code-line { color: var(--primary); border-right-color: var(--primary); }
+body.light-mode .control-btn { border-color: var(--primary); color: var(--primary); }
+body.light-mode .control-btn:hover { background: var(--primary); color: white; }
+body.light-mode .method-step-number { background: var(--gradient-1); color: white; }
+body.light-mode .outil-icon { color: white; }
+body.light-mode .skill-icon { color: var(--secondary); }
+body.light-mode .project-info h3, body.light-mode .skill-content h3, body.light-mode .timeline-content h3, body.light-mode .veille-card-title, body.light-mode .outil-card h3, body.light-mode .method-step h4, body.light-mode .contact-info h3, body.light-mode .contact-form h3, body.light-mode .methodologie h3 { color: var(--dark); }
+body.light-mode .section-subtitle { color: #666; }
+body.light-mode .stat-label { color: #666; }
+body.light-mode .veille-meta { border-top-color: #ddd; color: #888; }
+body.light-mode .veille-source { color: var(--primary); }
+body.light-mode .filter-btn:not(.active) { border-color: #ccc; color: #555; }
+body.light-mode .filter-btn:not(.active) .filter-count { background: #eee; color: #666; }
+body.light-mode .terminal-window { background: #1e1e1e; border-color: var(--primary); }
+body.light-mode .terminal-header { background: #2d2d2d; }
+body.light-mode .terminal-body { color: #00ff88; }
+body.light-mode .status-panel { background: rgba(30, 30, 30, 0.95); border-color: var(--primary); }
+body.light-mode .status-panel .status-text { color: #00ff88; }
+body.light-mode .boot-overlay { background: #000; color: #00ff88; }
+body.light-mode .custom-cursor { border-color: var(--primary); }
+body.light-mode .custom-cursor-dot { background: var(--primary); }
+body.light-mode .toast { background: var(--card-bg); border-color: var(--primary); color: var(--text); }
+body.light-mode .achievement-badge { background: var(--card-bg); border-color: var(--primary); color: var(--text); }
+body.light-mode .dashboard-card { background: var(--card-bg); border-color: var(--border-color); }
+body.light-mode .dashboard-bar { background: rgba(0, 170, 102, 0.2); }
+body.light-mode .dashboard-bar-fill { background: var(--primary); }
+body.light-mode .particle { background: var(--primary); }
+body.light-mode .log-entry { color: #00aa66; border-color: rgba(0, 170, 102, 0.3); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'Inter', sans-serif;
+background: var(--bg);
+color: var(--text);
+overflow-x: hidden;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+transition: background 0.3s ease, color 0.3s ease;
+cursor: none;
+}
+
+body.light-mode { cursor: auto; }
+body.light-mode .custom-cursor, body.light-mode .custom-cursor-dot { display: none; }
+
+h1, h2, h3, h4 {
+font-family: 'Fira Code', monospace;
+color: var(--primary);
+text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4 { text-shadow: none; }
+
+/* ============ CURSEUR PERSONNALISÉ ============ */
+.custom-cursor {
+position: fixed;
+width: 30px;
+height: 30px;
+border: 2px solid var(--primary);
+border-radius: 50%;
+pointer-events: none;
+z-index: 99999;
+transition: transform 0.15s ease, width 0.2s, height 0.2s;
+transform: translate(-50%, -50%);
+mix-blend-mode: difference;
+}
+
+.custom-cursor.hovering {
+width: 50px;
+height: 50px;
+background: rgba(0, 255, 136, 0.1);
+}
+
+.custom-cursor-dot {
+position: fixed;
+width: 6px;
+height: 6px;
+background: var(--primary);
+border-radius: 50%;
+pointer-events: none;
+z-index: 99999;
+transform: translate(-50%, -50%);
+}
+
+/* ============ BARRE DE PROGRESSION SCROLL ============ */
+.scroll-progress {
+position: fixed;
+top: 0;
+left: 0;
+height: 3px;
+background: var(--gradient-1);
+z-index: 10000;
+width: 0%;
+box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+transition: width 0.1s;
+}
+
+/* ============ BOOT SEQUENCE ============ */
+.boot-overlay {
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: #000;
+color: #00ff88;
+font-family: 'VT323', monospace;
+font-size: 1.1rem;
+z-index: 100000;
+padding: 2rem;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+
+.boot-overlay .boot-line {
+opacity: 0;
+animation: bootFade 0.1s forwards;
+margin-bottom: 0.3rem;
+}
+
+.boot-overlay .boot-line.ok { color: #00ff88; }
+.boot-overlay .boot-line.warn { color: #ffa502; }
+.boot-overlay .boot-line.err { color: #ff6b6b; }
+
+@keyframes bootFade { to { opacity: 1; } }
+
+.boot-overlay .boot-cursor {
+display: inline-block;
+width: 10px;
+height: 1.1rem;
+background: #00ff88;
+animation: blink 0.7s infinite;
+vertical-align: middle;
+margin-left: 5px;
+}
+
+@keyframes blink {
+0%, 50% { opacity: 1; }
+51%, 100% { opacity: 0; }
+}
+
+.boot-overlay.fade-out { animation: bootFadeOut 0.5s forwards; }
+@keyframes bootFadeOut { to { opacity: 0; visibility: hidden; } }
+
+/* ============ HEADER & NAV ============ */
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(10, 10, 10, 0.95);
+backdrop-filter: blur(10px);
+border-bottom: 2px solid var(--primary);
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+z-index: 1000;
+transition: all 0.3s ease;
+padding-top: 3px;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.8rem 2rem;
+max-width: 1400px;
+margin: 0 auto;
+flex-wrap: wrap;
+gap: 0.5rem;
+}
+
+.logo {
+font-family: 'Fira Code', monospace;
+font-size: 1.3rem;
+font-weight: 700;
+background: var(--gradient-1);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+cursor: pointer;
+}
+
+.logo:hover { animation: glitch 0.3s; }
+
+@keyframes glitch {
+0%, 100% { transform: translate(0); }
+20% { transform: translate(-2px, 2px); }
+40% { transform: translate(-2px, -2px); }
+60% { transform: translate(2px, 2px); }
+80% { transform: translate(2px, -2px); }
+}
+
+.nav-links {
+display: flex;
+gap: 0.3rem;
+list-style: none;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.nav-links a {
+font-family: 'Fira Code', monospace;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+text-decoration: none;
+color: var(--text);
+font-weight: 500;
+font-size: 0.85rem;
+transition: all 0.3s ease;
+border: 1px solid transparent;
+cursor: pointer;
+}
+
+.nav-links a:hover, .nav-links a.active {
+color: var(--primary);
+border: 1px solid var(--primary);
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+background: rgba(0, 255, 136, 0.1);
+}
+
+.nav-controls {
+display: flex;
+gap: 0.5rem;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.live-clock {
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+color: var(--primary);
+padding: 0.4rem 0.8rem;
+border: 1px solid var(--border-color);
+border-radius: 5px;
+background: rgba(0, 255, 136, 0.05);
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+
+.live-clock .clock-dot {
+width: 6px;
+height: 6px;
+background: var(--primary);
+border-radius: 50%;
+animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.control-btn {
+padding: 0.4rem 0.8rem;
+border: 2px solid var(--primary);
+background: transparent;
+color: var(--primary);
+border-radius: 5px;
+cursor: pointer;
+font-weight: 600;
+font-size: 0.85rem;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+gap: 0.3rem;
+font-family: 'Fira Code', monospace;
+}
+
+.control-btn:hover {
+background: var(--primary);
+color: var(--dark);
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.hamburger span { width: 25px; height: 3px; background: var(--primary); border-radius: 3px; transition: all 0.3s ease; }
+
+/* ============ ONGLETS ============ */
+.tab-content { display: none; animation: fadeIn 0.5s ease-in-out; flex: 1; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ HERO SECTION ============ */
+#accueil {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 120px 2rem 60px;
+background: var(--dark);
+position: relative;
+overflow: hidden;
+border-bottom: 3px solid var(--primary);
+}
+
+#accueil::before {
+content: '';
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: repeating-linear-gradient(
+0deg,
+rgba(0, 255, 136, 0.03),
+rgba(0, 255, 136, 0.03) 1px,
+transparent 1px,
+transparent 2px
+);
+pointer-events: none;
+}
+
+/* Canvas pour particules */
+#particleCanvas {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+z-index: 0;
+pointer-events: none;
+}
+
+.code-background {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+overflow: hidden;
+z-index: 0;
+pointer-events: none;
+}
+
+.code-line {
+position: absolute;
+font-family: 'Fira Code', monospace;
+font-size: 13px;
+color: var(--primary);
+white-space: nowrap;
+overflow: hidden;
+border-right: 2px solid var(--primary);
+animation:
+typing 3s steps(40, end) forwards,
+blink-caret 0.75s step-end infinite,
+fadeCode 8s ease-in-out infinite;
+opacity: 0;
+}
+
+.code-line:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s, 0s, 0s; }
+.code-line:nth-child(2) { top: 20%; left: 15%; animation-delay: 0.5s, 0.5s, 0.5s; }
+.code-line:nth-child(3) { top: 30%; left: 8%; animation-delay: 1s, 1s, 1s; }
+.code-line:nth-child(4) { top: 40%; left: 20%; animation-delay: 1.5s, 1.5s, 1.5s; }
+.code-line:nth-child(5) { top: 50%; left: 10%; animation-delay: 2s, 2s, 2s; }
+.code-line:nth-child(6) { top: 60%; left: 25%; animation-delay: 2.5s, 2.5s, 2.5s; }
+.code-line:nth-child(7) { top: 70%; left: 5%; animation-delay: 3s, 3s, 3s; }
+.code-line:nth-child(8) { top: 80%; left: 18%; animation-delay: 3.5s, 3.5s, 3.5s; }
+.code-line:nth-child(9) { top: 15%; right: 10%; animation-delay: 0.3s, 0.3s, 0.3s; }
+.code-line:nth-child(10) { top: 25%; right: 20%; animation-delay: 0.8s, 0.8s, 0.8s; }
+.code-line:nth-child(11) { top: 35%; right: 8%; animation-delay: 1.3s, 1.3s, 1.3s; }
+.code-line:nth-child(12) { top: 45%; right: 15%; animation-delay: 1.8s, 1.8s, 1.8s; }
+.code-line:nth-child(13) { top: 55%; right: 25%; animation-delay: 2.3s, 2.3s, 2.3s; }
+.code-line:nth-child(14) { top: 65%; right: 12%; animation-delay: 2.8s, 2.8s, 2.8s; }
+.code-line:nth-child(15) { top: 75%; right: 22%; animation-delay: 3.3s, 3.3s, 3.3s; }
+
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: var(--primary); } }
+@keyframes fadeCode {
+0%, 100% { opacity: 0; transform: translateY(0); }
+15%, 85% { opacity: 0.25; transform: translateY(0); }
+50% { opacity: 0.35; transform: translateY(-5px); }
+}
+
+.code-keyword { color: #ff79c6; }
+.code-string { color: #50fa7b; }
+.code-function { color: #8be9fd; }
+.code-comment { color: #6272a4; font-style: italic; }
+
+.hero-content {
+text-align: center;
+color: var(--text);
+position: relative;
+z-index: 1;
+max-width: 900px;
+}
+
+.hero-content h1 {
+font-size: 3.5rem;
+color: var(--primary);
+text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+animation: glow 2s ease-in-out infinite alternate, fadeInUp 1s ease;
+margin-bottom: 1rem;
+font-family: 'Orbitron', sans-serif;
+letter-spacing: 2px;
+}
+
+@keyframes glow {
+from { text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); }
+to { text-shadow: 0 0 30px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.6); }
+}
+
+body.light-mode .hero-content h1 { animation: fadeInUp 1s ease; }
+
+.hero-content h2 {
+font-size: 1.3rem;
+font-weight: 300;
+margin-bottom: 1.5rem;
+color: var(--secondary);
+min-height: 1.5rem;
+}
+
+.hero-content h2 .typing-cursor {
+display: inline-block;
+width: 3px;
+height: 1.2rem;
+background: var(--secondary);
+margin-left: 3px;
+animation: blink 0.8s infinite;
+vertical-align: middle;
+}
+
+.hero-content p {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+color: var(--text);
+animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-intro {
+font-size: 1rem;
+max-width: 800px;
+margin: 0 auto 2rem;
+color: var(--text);
+line-height: 1.7;
+padding: 1.3rem 1.8rem;
+background: var(--card-bg);
+border-radius: 5px;
+border-left: 4px solid var(--primary);
+text-align: left;
+animation: fadeInUp 1s ease 0.6s both;
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ DASHBOARD SYSTÈME ============ */
+.system-dashboard {
+max-width: 700px;
+margin: 1.5rem auto 0;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 0.8rem;
+animation: fadeInUp 1s ease 1s both;
+}
+
+.dashboard-card {
+background: rgba(10, 10, 10, 0.9);
+border: 1px solid var(--border-color);
+border-radius: 5px;
+padding: 0.8rem;
+backdrop-filter: blur(10px);
+}
+
+.dashboard-card .dash-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.75rem;
+}
+
+.dashboard-card .dash-label {
+color: var(--primary);
+font-weight: 600;
+}
+
+.dashboard-card .dash-value {
+color: var(--secondary);
+font-weight: 700;
+}
+
+.dashboard-bar {
+width: 100%;
+height: 6px;
+background: rgba(0, 255, 136, 0.1);
+border-radius: 3px;
+overflow: hidden;
+}
+
+.dashboard-bar-fill {
+height: 100%;
+background: var(--gradient-1);
+border-radius: 3px;
+transition: width 0.5s ease;
+box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.dashboard-card.warning .dashboard-bar-fill { background: var(--gradient-3); }
+.dashboard-card.warning .dash-value { color: var(--accent); }
+
+/* ============ TERMINAL INTERACTIF ============ */
+.terminal-window {
+max-width: 700px;
+margin: 1.5rem auto 0;
+background: #0d0d0d;
+border: 1px solid var(--primary);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+animation: fadeInUp 1s ease 1.2s both;
+text-align: left;
+}
+
+.terminal-header {
+background: #1a1a1a;
+padding: 0.6rem 1rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-btn { width: 12px; height: 12px; border-radius: 50%; }
+.terminal-btn.red { background: #ff5f57; }
+.terminal-btn.yellow { background: #febc2e; }
+.terminal-btn.green { background: #28c840; }
+
+.terminal-title {
+margin-left: 1rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.8rem;
+color: #888;
+}
+
+.terminal-body {
+padding: 1rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+color: #00ff88;
+min-height: 180px;
+max-height: 250px;
+overflow-y: auto;
+}
+
+.terminal-body::-webkit-scrollbar { width: 6px; }
+.terminal-body::-webkit-scrollbar-track { background: #0d0d0d; }
+.terminal-body::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+.terminal-line { margin-bottom: 0.4rem; line-height: 1.4; }
+.terminal-line .prompt { color: #00d4ff; }
+.terminal-line .command { color: #00ff88; }
+.terminal-line .output { color: #aaa; white-space: pre-wrap; }
+.terminal-line .output strong { color: #00ff88; }
+.terminal-line .output .highlight { color: #ff79c6; }
+.terminal-line .output .info { color: #8be9fd; }
+.terminal-line .output .success { color: #00ff88; }
+.terminal-line .output .error { color: #ff6b6b; }
+
+.terminal-input-line { display: flex; align-items: center; margin-top: 0.5rem; }
+.terminal-input-line .prompt { color: #00d4ff; margin-right: 0.5rem; font-family: 'Fira Code', monospace; }
+
+.terminal-input {
+flex: 1;
+background: transparent;
+border: none;
+outline: none;
+color: #00ff88;
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+caret-color: #00ff88;
+}
+
+/* ============ BOUTONS ============ */
+.btn {
+font-family: 'Fira Code', monospace;
+display: inline-block;
+padding: 0.9rem 2rem;
+border-radius: 5px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s ease;
+border: 2px solid var(--primary);
+background: transparent;
+color: var(--primary);
+text-transform: uppercase;
+letter-spacing: 2px;
+cursor: pointer;
+font-size: 0.9rem;
+position: relative;
+overflow: hidden;
+}
+
+.btn::before {
+content: '';
+position: absolute;
+top: 0; left: -100%;
+width: 100%; height: 100%;
+background: var(--primary);
+transition: left 0.3s ease;
+z-index: -1;
+}
+
+.btn:hover::before { left: 0; }
+.btn:hover { color: var(--dark); box-shadow: 0 0 30px rgba(0, 255, 136, 0.6); }
+
+.btn-primary { border-color: var(--secondary); color: var(--secondary); }
+.btn-primary::before { background: var(--secondary); }
+
+/* ============ SECTIONS ============ */
+section {
+padding: 80px 2rem;
+max-width: 1400px;
+margin: 2rem auto;
+background: var(--dark-light);
+border: 1px solid var(--border-color);
+border-radius: 5px;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.2rem;
+font-weight: 700;
+margin-bottom: 1rem;
+color: var(--secondary);
+text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+position: relative;
+}
+
+.section-title::after {
+content: '';
+position: absolute;
+bottom: -15px;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background: var(--gradient-1);
+box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.section-subtitle {
+text-align: center;
+font-size: 1rem;
+color: #888;
+max-width: 700px;
+margin: 0 auto 3rem;
+}
+
+/* ============ COMPÉTENCES ============ */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.skill-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 5px;
+padding: 2rem;
+text-align: center;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.skill-card::before {
+content: '>';
+position: absolute;
+top: 10px; left: 10px;
+color: var(--primary);
+font-family: 'Fira Code', monospace;
+font-weight: bold;
+font-size: 1.2rem;
+}
+
+.skill-card::after {
+content: '';
+position: absolute;
+top: -100%;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(180deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+transition: top 0.5s ease;
+}
+
+.skill-card:hover::after { top: 100%; }
+.skill-card:hover { border-color: var(--primary); box-shadow: 0 0 20px rgba(0, 255, 136, 0.3); transform: translateY(-5px); }
+.skill-card i { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); }
+.skill-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--text); }
+.skill-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+body.light-mode .skill-card p { color: #555; }
+
+/* ============ PROJETS ============ */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.project-card {
+background: var(--card-bg);
+border: 1px solid rgba(0, 212, 255, 0.3);
+border-radius: 5px;
+overflow: hidden;
+transition: all 0.3s ease;
+position: relative;
+}
+
+.project-card::before {
+content: '';
+position: absolute;
+top: 0; left: -100%;
+width: 100%; height: 2px;
+background: var(--gradient-1);
+transition: left 0.5s ease;
+z-index: 2;
+}
+
+.project-card:hover::before { left: 100%; }
+.project-card:hover { border-color: var(--secondary); box-shadow: 0 0 25px rgba(0, 212, 255, 0.3); transform: translateY(-5px); }
+.project-image {
+height: 200px;
+background: linear-gradient(135deg, var(--dark) 0%, var(--card-bg) 100%);
+display: flex; align-items: center; justify-content: center;
+position: relative; overflow: hidden;
+}
+.project-image i { font-size: 4rem; color: var(--secondary); filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.5)); }
+.project-info { padding: 1.5rem; }
+.project-info h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--text); }
+.project-info p { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
+body.light-mode .project-info p { color: #555; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+background: rgba(0, 255, 136, 0.15);
+color: var(--primary);
+border: 1px solid var(--primary);
+padding: 0.3rem 0.8rem;
+border-radius: 3px;
+font-size: 0.75rem;
+font-family: 'Fira Code', monospace;
+font-weight: 600;
+}
+
+/* ============ TIMELINE ============ */
+.timeline { position: relative; max-width: 900px; margin: 0 auto; }
+.timeline::before {
+content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+width: 3px; height: 100%; background: var(--gradient-1);
+box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+.timeline-item { margin-bottom: 2rem; position: relative; width: 50%; padding: 0 2rem; }
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-dot {
+position: absolute; width: 20px; height: 20px; background: var(--dark);
+border: 3px solid var(--primary); border-radius: 50%; top: 10px;
+transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+.timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -10px; }
+.timeline-item:hover .timeline-dot { background: var(--primary); transform: scale(1.3); }
+.timeline-content {
+background: var(--card-bg); border: 1px solid var(--border-color);
+border-left: 4px solid var(--primary); padding: 1.5rem;
+border-radius: 5px; transition: all 0.3s ease;
+}
+.timeline-content:hover { box-shadow: 0 0 20px rgba(0, 255, 136, 0.2); }
+.timeline-content h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text); }
+.timeline-content p { color: #aaa; font-size: 0.9rem; line-height: 1.6; }
+body.light-mode .timeline-content p { color: #555; }
+.timeline-date {
+display: inline-block; padding: 0.3rem 0.8rem;
+background: rgba(0, 255, 136, 0.15); color: var(--primary);
+border: 1px solid var(--primary); border-radius: 3px;
+font-family: 'Fira Code', monospace; font-weight: 600;
+margin-bottom: 0.8rem; font-size: 0.85rem;
+}
+
+/* ============ VEILLE ============ */
+.veille-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+.stat-card {
+background: var(--card-bg); border: 1px solid var(--border-color);
+padding: 1.5rem; border-radius: 5px; text-align: center;
+transition: all 0.3s ease;
+}
+.stat-card:hover { border-color: var(--primary); box-shadow: 0 0 20px rgba(0, 255, 136, 0.2); transform: translateY(-3px); }
+.stat-number {
+font-size: 2.5rem; font-weight: 800; color: var(--primary);
+text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+font-family: 'Orbitron', sans-serif;
+}
+body.light-mode .stat-number { text-shadow: none; }
+.stat-label { color: #888; font-size: 0.9rem; margin-top: 0.5rem; }
+.veille-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-bottom: 3rem; }
+.filter-btn {
+padding: 0.6rem 1.2rem; border: 1px solid var(--border-color);
+background: var(--card-bg); border-radius: 5px; cursor: pointer;
+font-weight: 600; color: var(--text); transition: all 0.3s ease;
+font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;
+font-family: 'Fira Code', monospace;
+}
+.filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.filter-btn.active {
+background: var(--primary); color: var(--dark);
+border-color: var(--primary); box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+.filter-count { background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; }
+body.light-mode .filter-btn:not(.active) .filter-count { background: #eee; color: #666; }
+.veille-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+.veille-card {
+background: var(--card-bg); border: 1px solid rgba(0, 212, 255, 0.2);
+border-radius: 5px; overflow: hidden; transition: all 0.3s ease;
+display: flex; flex-direction: column;
+position: relative;
+}
+.veille-card.hidden { display: none; }
+.veille-card:hover { border-color: var(--secondary); box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); transform: translateY(-5px); }
+.veille-card-header {
+padding: 1.2rem; color: white; position: relative;
+min-height: 100px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.veille-card-header > * { position: relative; z-index: 1; }
+.cat-cyber .veille-card-header { background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%); }
+.cat-cloud .veille-card-header { background: linear-gradient(135deg, #00d4ff 0%, #4facfe 100%); }
+.cat-sys .veille-card-header { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.cat-dev .veille-card-header { background: linear-gradient(135deg, #ff6b6b 0%, #ffa502 100%); }
+.cat-ia .veille-card-header { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+.veille-category {
+display: inline-flex; align-items: center; gap: 0.5rem;
+background: rgba(0,0,0,0.3); padding: 0.3rem 0.8rem;
+border-radius: 3px; font-size: 0.8rem; font-weight: 600;
+width: fit-content; font-family: 'Fira Code', monospace;
+}
+.veille-card-title { font-size: 1.1rem; font-weight: 700; margin-top: 0.8rem; line-height: 1.3; color: white; text-shadow: none; }
+.veille-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.veille-subcategory {
+display: inline-block; background: rgba(0, 212, 255, 0.15); color: var(--secondary);
+padding: 0.3rem 0.8rem; border-radius: 3px; font-size: 0.75rem;
+font-weight: 600; margin-bottom: 1rem; width: fit-content;
+font-family: 'Fira Code', monospace;
+}
+.veille-description { color: #aaa; line-height: 1.7; margin-bottom: 1.5rem; flex: 1; font-size: 0.9rem; }
+body.light-mode .veille-description { color: #555; }
+.veille-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.veille-tag {
+background: rgba(0, 212, 255, 0.15); color: var(--secondary);
+border: 1px solid var(--secondary); padding: 0.25rem 0.6rem;
+border-radius: 3px; font-size: 0.7rem; font-weight: 500;
+font-family: 'Fira Code', monospace;
+}
+.veille-meta {
+display: flex; justify-content: space-between; align-items: center;
+padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);
+font-size: 0.8rem; color: #888;
+}
+body.light-mode .veille-meta { border-top-color: #ddd; }
+.veille-date { display: flex; align-items: center; gap: 0.4rem; }
+.veille-source {
+display: flex; align-items: center; gap: 0.4rem;
+color: var(--secondary); font-weight: 600; text-decoration: none;
+font-family: 'Fira Code', monospace;
+}
+
+.outils-veille { margin-top: 4rem; }
+.outils-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.outil-card {
+background: var(--card-bg); border: 1px solid rgba(255, 107, 107, 0.3);
+padding: 1.5rem; border-radius: 5px; text-align: center;
+transition: all 0.3s ease;
+}
+.outil-card:hover { border-color: var(--accent); box-shadow: 0 0 15px rgba(255, 107, 107, 0.3); transform: translateY(-3px); }
+.outil-icon {
+width: 60px; height: 60px; margin: 0 auto 1rem;
+border-radius: 50%; display: flex; align-items: center; justify-content: center;
+font-size: 1.5rem; color: var(--dark); background: var(--gradient-3);
+box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+}
+.outil-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text); }
+.outil-card p { color: #aaa; font-size: 0.85rem; line-height: 1.5; }
+body.light-mode .outil-card p { color: #555; }
+
+.methodologie { margin-top: 4rem; background: var(--card-bg); border: 2px dashed var(--border-color); padding: 2rem; border-radius: 5px; }
+.methodologie h3 { text-align: center; font-size: 1.8rem; margin-bottom: 1rem; color: var(--secondary); }
+.method-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.method-step { text-align: center; }
+.method-step-number {
+width: 50px; height: 50px; margin: 0 auto 1rem;
+background: var(--gradient-1); color: var(--dark); border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.3rem; font-weight: 800;
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+font-family: 'Fira Code', monospace;
+}
+.method-step h4 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text); }
+.method-step p { color: #aaa; font-size: 0.85rem; line-height: 1.5; }
+body.light-mode .method-step p { color: #555; }
+
+/* ============ CONTACT ============ */
+.contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; max-width: 1100px; margin: 0 auto; }
+.contact-info, .contact-form {
+background: var(--card-bg); border: 1px solid var(--border-color);
+padding: 2rem; border-radius: 5px;
+}
+.contact-info h3, .contact-form h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary); }
+.contact-item {
+display: flex; align-items: center; gap: 1rem; padding: 1rem;
+margin-bottom: 1rem; background: rgba(0, 255, 136, 0.05);
+border-left: 3px solid var(--primary); border-radius: 3px;
+transition: all 0.3s ease;
+}
+.contact-item:hover { background: rgba(0, 255, 136, 0.1); transform: translateX(5px); }
+.contact-item i {
+font-size: 1.2rem; width: 40px; height: 40px;
+display: flex; align-items: center; justify-content: center;
+background: var(--dark); color: var(--primary);
+border: 1px solid var(--primary); border-radius: 50%;
+}
+.contact-item strong { color: var(--text); display: block; margin-bottom: 0.2rem; }
+.contact-item p { color: #aaa; font-size: 0.9rem; }
+body.light-mode .contact-item p { color: #555; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label {
+display: block; margin-bottom: 0.5rem; font-weight: 600;
+color: var(--text); font-family: 'Fira Code', monospace; font-size: 0.9rem;
+}
+.form-group input, .form-group textarea {
+width: 100%; padding: 0.8rem; border: 1px solid var(--border-color);
+border-radius: 3px; font-family: 'Fira Code', monospace;
+font-size: 0.9rem; background: var(--dark); color: var(--text);
+transition: all 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus {
+outline: none; border-color: var(--primary);
+box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+/* ============ FOOTER ============ */
+footer {
+background: var(--dark); color: white; text-align: center;
+padding: 2rem; margin-top: auto; border-top: 3px solid var(--primary);
+position: relative;
+}
+
+.footer-ascii {
+font-family: 'VT323', monospace;
+font-size: 0.9rem;
+color: var(--primary);
+opacity: 0.6;
+margin-bottom: 1rem;
+white-space: pre;
+line-height: 1;
+}
+
+.social-links { margin-bottom: 1rem; }
+.social-links a {
+display: inline-flex; width: 45px; height: 45px;
+align-items: center; justify-content: center;
+border: 1px solid var(--primary); border-radius: 50%;
+margin: 0 0.5rem; font-size: 1.2rem; color: var(--primary);
+transition: all 0.3s ease;
+}
+.social-links a:hover {
+background: var(--primary); color: var(--dark);
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.6); transform: translateY(-3px);
+}
+
+.uptime-badge {
+font-family: 'Fira Code', monospace;
+font-size: 0.75rem;
+color: var(--primary);
+opacity: 0.7;
+margin-top: 1rem;
+}
+
+/* ============ STATUS PANEL ============ */
+.status-panel {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: rgba(10, 10, 10, 0.95);
+border: 1px solid var(--primary);
+border-radius: 5px;
+padding: 0.8rem 1rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.75rem;
+color: var(--primary);
+z-index: 999;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+max-width: 220px;
+}
+
+.status-panel .status-row {
+display: flex;
+justify-content: space-between;
+gap: 1rem;
+margin-bottom: 0.3rem;
+}
+
+.status-panel .status-label { color: #888; }
+.status-panel .status-text { color: var(--primary); }
+.status-panel .status-dot {
+display: inline-block;
+width: 6px; height: 6px;
+background: var(--primary);
+border-radius: 50%;
+margin-right: 0.4rem;
+animation: pulse 1.5s infinite;
+}
+
+/* ============ RETURN TO TOP ============ */
+.return-top {
+position: fixed;
+bottom: 20px;
+left: 20px;
+width: 45px;
+height: 45px;
+background: var(--card-bg);
+border: 1px solid var(--primary);
+border-radius: 5px;
+color: var(--primary);
+font-size: 1.2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.return-top.visible { opacity: 1; visibility: visible; }
+.return-top:hover { background: var(--primary); color: var(--dark); transform: translateY(-3px); }
+
+/* ============ MATRIX EFFECT ============ */
+.matrix-canvas {
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+z-index: 99998;
+pointer-events: none;
+opacity: 0;
+transition: opacity 0.5s;
+}
+
+.matrix-canvas.active { opacity: 1; }
+
+/* ============ TOAST NOTIFICATIONS ============ */
+.toast-container {
+position: fixed;
+top: 90px;
+right: 20px;
+z-index: 9999;
+display: flex;
+flex-direction: column;
+gap: 0.8rem;
+max-width: 350px;
+}
+
+.toast {
+background: rgba(10, 10, 10, 0.95);
+border: 1px solid var(--primary);
+border-left: 4px solid var(--primary);
+border-radius: 5px;
+padding: 1rem 1.2rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+color: var(--text);
+backdrop-filter: blur(10px);
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+animation: slideInRight 0.4s ease, fadeOut 0.4s ease 4s forwards;
+display: flex;
+align-items: flex-start;
+gap: 0.8rem;
+}
+
+.toast.success { border-left-color: var(--primary); }
+.toast.warning { border-left-color: var(--warning); }
+.toast.error { border-left-color: var(--accent); }
+.toast.info { border-left-color: var(--secondary); }
+
+.toast-icon {
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+
+.toast.success .toast-icon { color: var(--primary); }
+.toast.warning .toast-icon { color: var(--warning); }
+.toast.error .toast-icon { color: var(--accent); }
+.toast.info .toast-icon { color: var(--secondary); }
+
+.toast-content { flex: 1; }
+.toast-title { font-weight: 700; margin-bottom: 0.3rem; color: var(--primary); }
+.toast-message { color: #aaa; font-size: 0.8rem; line-height: 1.4; }
+
+@keyframes slideInRight {
+from { transform: translateX(400px); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+to { opacity: 0; transform: translateX(400px); }
+}
+
+/* ============ ACHIEVEMENTS PANEL ============ */
+.achievements-toggle {
+position: fixed;
+bottom: 140px;
+right: 20px;
+width: 45px;
+height: 45px;
+background: var(--card-bg);
+border: 1px solid var(--warning);
+border-radius: 5px;
+color: var(--warning);
+font-size: 1.2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+box-shadow: 0 0 15px rgba(255, 165, 2, 0.3);
+transition: all 0.3s ease;
+}
+
+.achievements-toggle:hover {
+background: var(--warning);
+color: var(--dark);
+transform: translateY(-3px);
+}
+
+.achievements-toggle .badge-count {
+position: absolute;
+top: -5px;
+right: -5px;
+background: var(--accent);
+color: white;
+font-size: 0.7rem;
+font-weight: 700;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Fira Code', monospace;
+}
+
+.achievements-panel {
+position: fixed;
+bottom: 200px;
+right: 20px;
+width: 320px;
+max-height: 400px;
+background: rgba(10, 10, 10, 0.98);
+border: 1px solid var(--warning);
+border-radius: 8px;
+padding: 1.2rem;
+z-index: 999;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 30px rgba(255, 165, 2, 0.3);
+display: none;
+overflow-y: auto;
+}
+
+.achievements-panel.active { display: block; animation: slideInRight 0.3s ease; }
+
+.achievements-panel h3 {
+font-family: 'Fira Code', monospace;
+color: var(--warning);
+font-size: 1rem;
+margin-bottom: 1rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.achievement-badge {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+padding: 0.8rem;
+margin-bottom: 0.6rem;
+background: rgba(255, 165, 2, 0.05);
+border: 1px solid rgba(255, 165, 2, 0.3);
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+.achievement-badge.unlocked {
+background: rgba(0, 255, 136, 0.1);
+border-color: var(--primary);
+}
+
+.achievement-badge.locked {
+opacity: 0.4;
+filter: grayscale(1);
+}
+
+.achievement-icon {
+font-size: 1.5rem;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(255, 165, 2, 0.2);
+border-radius: 5px;
+flex-shrink: 0;
+}
+
+.achievement-badge.unlocked .achievement-icon {
+background: rgba(0, 255, 136, 0.2);
+}
+
+.achievement-info { flex: 1; }
+.achievement-name {
+font-family: 'Fira Code', monospace;
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--text);
+margin-bottom: 0.2rem;
+}
+.achievement-desc {
+font-size: 0.75rem;
+color: #888;
+line-height: 1.3;
+}
+
+/* ============ LIVE LOGS ============ */
+.live-logs {
+position: fixed;
+bottom: 20px;
+left: 80px;
+width: 280px;
+max-height: 200px;
+background: rgba(10, 10, 10, 0.95);
+border: 1px solid var(--border-color);
+border-radius: 5px;
+padding: 0.8rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.7rem;
+color: var(--primary);
+z-index: 998;
+backdrop-filter: blur(10px);
+overflow: hidden;
+}
+
+.live-logs-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5rem;
+padding-bottom: 0.5rem;
+border-bottom: 1px solid var(--border-color);
+}
+
+.live-logs-title {
+font-weight: 700;
+color: var(--primary);
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+
+.live-logs-title .pulse-dot {
+width: 6px;
+height: 6px;
+background: var(--primary);
+border-radius: 50%;
+animation: pulse 1s infinite;
+}
+
+.live-logs-content {
+max-height: 150px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 0.3rem;
+}
+
+.live-logs-content::-webkit-scrollbar { width: 4px; }
+.live-logs-content::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
+
+.log-entry {
+padding: 0.3rem 0;
+border-left: 2px solid var(--border-color);
+padding-left: 0.5rem;
+animation: fadeIn 0.3s ease;
+font-size: 0.65rem;
+line-height: 1.3;
+}
+
+.log-entry .log-time {
+color: #666;
+margin-right: 0.4rem;
+}
+
+.log-entry .log-msg { color: var(--primary); }
+.log-entry.warn .log-msg { color: var(--warning); }
+.log-entry.error .log-msg { color: var(--accent); }
+.log-entry.success .log-msg { color: #00ff88; }
+
+/* ============ THREAT COUNTER ============ */
+.threat-counter {
+position: fixed;
+top: 90px;
+left: 20px;
+background: rgba(10, 10, 10, 0.95);
+border: 1px solid var(--accent);
+border-radius: 5px;
+padding: 0.6rem 1rem;
+font-family: 'Fira Code', monospace;
+font-size: 0.75rem;
+color: var(--accent);
+z-index: 999;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.threat-counter .threat-icon {
+animation: pulse 2s infinite;
+}
+
+.threat-counter .threat-number {
+font-weight: 700;
+font-size: 1rem;
+color: var(--accent);
+font-family: 'Orbitron', sans-serif;
+}
+
+/* ============ ANIMATIONS ============ */
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 968px) {
+.nav-links {
+position: fixed; right: -100%; top: 70px; flex-direction: column;
+background: var(--dark); border: 1px solid var(--primary);
+width: 100%; text-align: center; padding: 2rem;
+transition: right 0.3s ease; gap: 0.5rem;
+}
+.nav-links.active { right: 0; }
+.hamburger { display: flex; }
+.hero-content h1 { font-size: 2rem; }
+.hero-intro { font-size: 0.95rem; padding: 1rem 1.5rem; }
+.code-line { font-size: 10px; }
+.contact-container { grid-template-columns: 1fr; }
+.timeline::before { left: 20px; }
+.timeline-item { width: 100%; left: 0 !important; padding-left: 60px; text-align: left !important; }
+.timeline-dot { left: 10px !important; right: auto !important; }
+.projects-grid, .veille-grid { grid-template-columns: 1fr; }
+.section-title { font-size: 1.8rem; }
+.nav-controls { position: absolute; top: 75px; right: 20px; }
+section { margin: 1rem; padding: 60px 1.5rem; }
+.status-panel, .live-logs, .threat-counter { display: none !important; }
+.custom-cursor, .custom-cursor-dot { display: none; }
+body { cursor: auto; }
+.terminal-window, .system-dashboard { margin: 1.5rem 0 0; }
+.live-clock { display: none; }
+.achievements-toggle, .achievements-panel { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Barre de progression scroll -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Curseur personnalisé -->
+<div class="custom-cursor" id="customCursor"></div>
+<div class="custom-cursor-dot" id="customCursorDot"></div>
+
+<!-- Canvas Matrix (easter egg) -->
+<canvas class="matrix-canvas" id="matrixCanvas"></canvas>
+
+<!-- Canvas Particules (hero) -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- Boot Sequence -->
+<div class="boot-overlay" id="bootOverlay"></div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Threat Counter -->
+<div class="threat-counter" id="threatCounter">
+<i class="fas fa-shield-alt threat-icon"></i>
+<span>MENACES BLOQUÉES:</span>
+<span class="threat-number" id="threatNumber">0</span>
+</div>
+
+<!-- Live Logs -->
+<div class="live-logs" id="liveLogs">
+<div class="live-logs-header">
+<span class="live-logs-title"><span class="pulse-dot"></span> SYSTEM LOGS</span>
+<span style="color: #666; font-size: 0.65rem;" id="logCount">0 entries</span>
+</div>
+<div class="live-logs-content" id="logsContent"></div>
+</div>
+
+<!-- Header -->
+<header>
+<nav>
+<div class="logo">&lt;Benjamin_MEDVEDEV/&gt;</div>
+<ul class="nav-links" id="nav-menu">
+<li><a class="tab-link active" data-tab="accueil" data-i18n="nav_home">Accueil</a></li>
+<li><a class="tab-link" data-tab="competences" data-i18n="nav_skills">Compétences</a></li>
+<li><a class="tab-link" data-tab="projets" data-i18n="nav_projects">Projets</a></li>
+<li><a class="tab-link" data-tab="experiences" data-i18n="nav_experience">Expériences</a></li>
+<li><a class="tab-link" data-tab="veille" data-i18n="nav_watch">Veille</a></li>
+<li><a class="tab-link" data-tab="contact" data-i18n="nav_contact">Contact</a></li>
+</ul>
+<div class="nav-controls">
+<div class="live-clock">
+<span class="clock-dot"></span>
+<span id="liveClock">00:00:00</span>
+</div>
+<button class="control-btn" id="theme-toggle" title="Mode clair/sombre">
+<i class="fas fa-sun"></i>
+</button>
+<button class="control-btn" id="lang-toggle" title="Changer de langue">
+<i class="fas fa-globe"></i> EN
+</button>
+</div>
+<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+</header>
+
+<main>
+<!-- Accueil -->
+<section id="accueil" class="tab-content active">
+<div class="code-background">
+<div class="code-line"><span class="code-keyword">const</span> <span class="code-function">admin</span> = <span class="code-keyword">new</span> <span class="code-function">SystemAdmin</span>();</div>
+<div class="code-line"><span class="code-comment">// Configuration réseau</span></div>
+<div class="code-line">admin.<span class="code-function">configureNetwork</span>(<span class="code-string">'192.168.1.0/24'</span>);</div>
+<div class="code-line"><span class="code-keyword">async function</span> <span class="code-function">secureServer</span>() {</div>
+<div class="code-line">  <span class="code-keyword">await</span> firewall.<span class="code-function">enable</span>();</div>
+<div class="code-line">  <span class="code-keyword">return</span> <span class="code-string">'Protected'</span>;</div>
+<div class="code-line">}</div>
+<div class="code-line">server.<span class="code-function">deploy</span>(<span class="code-string">'production'</span>);</div>
+<div class="code-line"><span class="code-keyword">import</span> { <span class="code-function">Docker</span> } <span class="code-keyword">from</span> <span class="code-string">'container'</span>;</div>
+<div class="code-line"><span class="code-keyword">class</span> <span class="code-function">Network</span> <span class="code-keyword">extends</span> <span class="code-function">Infrastructure</span> {</div>
+<div class="code-line">  <span class="code-function">constructor</span>() { <span class="code-keyword">super</span>(); }</div>
+<div class="code-line">  <span class="code-function">monitor</span>() { <span class="code-keyword">return</span> metrics; }</div>
+<div class="code-line">}</div>
+<div class="code-line"><span class="code-comment">// Veille technologique active</span></div>
+<div class="code-line">watch.<span class="code-function">subscribe</span>(<span class="code-string">'cybersecurity'</span>);</div>
+</div>
+<div class="hero-content">
+<h1 data-i18n="hero_title">Benjamin MEDVEDEV</h1>
+<h2><span id="typingText"></span><span class="typing-cursor"></span></h2>
+<p data-i18n="hero_desc">Passionné par l'informatique, je transforme les défis techniques en solutions innovantes</p>
+<div class="hero-intro" data-i18n="hero_intro">
+Actuellement en 2ème année de BTS SIO option SISR au CNED, je me spécialise dans l'administration des systèmes et réseaux d'entreprise. Mon parcours m'a permis de développer des compétences solides en cybersécurité, virtualisation et gestion d'infrastructures (Windows Server, Linux, PfSense). Rigoureux et curieux, je cherche constamment à me perfectionner pour concevoir des environnements IT performants, sécurisés et résilients.
+</div>
+<button class="btn btn-primary tab-link" data-tab="veille" data-i18n="hero_btn">Découvrir ma veille technologique</button>
+
+<!-- Dashboard Système -->
+<div class="system-dashboard">
+<div class="dashboard-card">
+<div class="dash-header">
+<span class="dash-label"><i class="fas fa-microchip"></i> CPU</span>
+<span class="dash-value" id="cpuValue">0%</span>
+</div>
+<div class="dashboard-bar"><div class="dashboard-bar-fill" id="cpuBar" style="width: 0%"></div></div>
+</div>
+<div class="dashboard-card">
+<div class="dash-header">
+<span class="dash-label"><i class="fas fa-memory"></i> RAM</span>
+<span class="dash-value" id="ramValue">0%</span>
+</div>
+<div class="dashboard-bar"><div class="dashboard-bar-fill" id="ramBar" style="width: 0%"></div></div>
+</div>
+<div class="dashboard-card">
+<div class="dash-header">
+<span class="dash-label"><i class="fas fa-network-wired"></i> NET</span>
+<span class="dash-value" id="netValue">0 Mb/s</span>
+</div>
+<div class="dashboard-bar"><div class="dashboard-bar-fill" id="netBar" style="width: 0%"></div></div>
+</div>
+<div class="dashboard-card warning">
+<div class="dash-header">
+<span class="dash-label"><i class="fas fa-shield-alt"></i> THREATS</span>
+<span class="dash-value" id="threatsValue">0</span>
+</div>
+<div class="dashboard-bar"><div class="dashboard-bar-fill" id="threatsBar" style="width: 0%"></div></div>
+</div>
+</div>
+
+<!-- Terminal interactif -->
+<div class="terminal-window">
+<div class="terminal-header">
+<div class="terminal-btn red"></div>
+<div class="terminal-btn yellow"></div>
+<div class="terminal-btn green"></div>
+<span class="terminal-title">benjamin@portfolio:~</span>
+</div>
+<div class="terminal-body" id="terminalBody">
+<div class="terminal-line">
+<span class="output info">Welcome to Benjamin's Portfolio Terminal v2.0</span>
+</div>
+<div class="terminal-line">
+<span class="output">Type <strong>'help'</strong> to see available commands. Try <strong>'hack'</strong> for a surprise!</span>
+</div>
+<div class="terminal-input-line">
+<span class="prompt">$</span>
+<input type="text" class="terminal-input" id="terminalInput" autofocus autocomplete="off" spellcheck="false">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Compétences -->
+<section id="competences" class="tab-content">
+<h2 class="section-title fade-in" data-i18n="skills_title">Mes Compétences</h2>
+<p class="section-subtitle fade-in" data-i18n="skills_subtitle">Un ensemble de compétences techniques acquises durant ma formation BTS SIO SISR</p>
+<div class="skills-grid">
+<div class="skill-card fade-in"><i class="fas fa-server"></i><h3 data-i18n="skill1_title">Administration Réseau</h3><p data-i18n="skill1_desc">Configuration de routeurs, commutateurs, Active Directory et services Windows/Linux</p></div>
+<div class="skill-card fade-in"><i class="fas fa-shield-alt"></i><h3 data-i18n="skill2_title">Cybersécurité</h3><p data-i18n="skill2_desc">Pare-feu, gestion des accès, sensibilisation aux bonnes pratiques de sécurité</p></div>
+<div class="skill-card fade-in"><i class="fas fa-code"></i><h3 data-i18n="skill3_title">Développement Web</h3><p data-i18n="skill3_desc">Création de sites web (HTML, CSS, PHP, JavaScript) et interfaces d'administration</p></div>
+<div class="skill-card fade-in"><i class="fas fa-database"></i><h3 data-i18n="skill4_title">Bases de Données</h3><p data-i18n="skill4_desc">Conception et administration de bases MySQL, MariaDB</p></div>
+<div class="skill-card fade-in"><i class="fas fa-tasks"></i><h3 data-i18n="skill5_title">Gestion de Projet</h3><p data-i18n="skill5_desc">Planification, cahier des charges, méthode Agile et collaboration en équipe</p></div>
+</div>
+</section>
+
+<!-- Projets -->
+<section id="projets" class="tab-content">
+<h2 class="section-title fade-in" data-i18n="projects_title">Projets Réalisés</h2>
+<p class="section-subtitle fade-in" data-i18n="projects_subtitle">Découvrez mes principales réalisations techniques durant ma formation</p>
+<div class="projects-grid">
+<div class="project-card fade-in">
+<div class="project-image"><i class="fas fa-network-wired"></i></div>
+<div class="project-info"><h3 data-i18n="project1_title">Mise en place d'un domaine Active Directory</h3><p data-i18n="project1_desc">Installation et configuration d'un contrôleur de domaine, gestion des GPO et profils utilisateurs itinérants.</p><div class="tags"><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">GPO</span></div></div>
+</div>
+<div class="project-card fade-in">
+<div class="project-image"><i class="fas fa-shield-virus"></i></div>
+<div class="project-info"><h3 data-i18n="project2_title">Configuration d'un pare-feu PfSense</h3><p data-i18n="project2_desc">Solution de sécurité périmétrique avec règles de filtrage, NAT et VPN pour l'accès distant sécurisé.</p><div class="tags"><span class="tag">PfSense</span><span class="tag">Réseau</span><span class="tag">Sécurité</span></div></div>
+</div>
+<div class="project-card fade-in">
+<div class="project-image"><i class="fas fa-globe"></i></div>
+<div class="project-info"><h3 data-i18n="project3_title">Déploiement d'un serveur Web LAMP</h3><p data-i18n="project3_desc">Stack Linux, Apache, MySQL, PHP. Hébergement d'un site web dynamique avec gestion de base de données.</p><div class="tags"><span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">PHP/MySQL</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- Expériences -->
+<section id="experiences" class="tab-content">
+<h2 class="section-title fade-in" data-i18n="exp_title">Expériences Professionnelles</h2>
+<p class="section-subtitle fade-in" data-i18n="exp_subtitle">Mon parcours professionnel et mes projets académiques</p>
+<div class="timeline">
+<div class="timeline-item fade-in">
+<div class="timeline-dot"></div>
+<div class="timeline-content"><span class="timeline-date">2025 - Présent</span><h3 data-i18n="exp1_title">Technicien Réseau et Systèmes (Stagiaire)</h3><p><strong>Centre Hospitalier Universitaire</strong> - Nancy</p><p data-i18n="exp1_desc">Assistance aux utilisateurs, maintenance du parc informatique, migration des serveurs et rédaction de procédures techniques.</p></div>
+</div>
+<div class="timeline-item fade-in">
+<div class="timeline-dot"></div>
+<div class="timeline-content"><span class="timeline-date">2026</span><h3 data-i18n="exp2_title">Projet Tutoré : Audit de sécurité</h3><p><strong>CNED</strong></p><p data-i18n="exp2_desc">Audit de sécurité d'infrastructure, identification des vulnérabilités et proposition de plans de remédiation.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Veille Technologique -->
+<section id="veille" class="tab-content">
+<h2 class="section-title fade-in" data-i18n="watch_title">Veille Technologique</h2>
+<p class="section-subtitle fade-in" data-i18n="watch_subtitle">Une veille active et structurée sur les principales thématiques de l'informatique moderne</p>
+<div class="veille-stats fade-in">
+<div class="stat-card"><div class="stat-number">5</div><div class="stat-label" data-i18n="stat1_label">Catégories suivies</div></div>
+<div class="stat-card"><div class="stat-number">12+</div><div class="stat-label" data-i18n="stat2_label">Sujets approfondis</div></div>
+<div class="stat-card"><div class="stat-number">20+</div><div class="stat-label" data-i18n="stat3_label">Sources actives</div></div>
+<div class="stat-card"><div class="stat-number">2 ans</div><div class="stat-label" data-i18n="stat4_label">De veille continue</div></div>
+</div>
+<div class="veille-filters fade-in">
+<button class="filter-btn active" data-filter="all"><i class="fas fa-layer-group"></i> <span data-i18n="filter_all">Toutes</span><span class="filter-count">12</span></button>
+<button class="filter-btn" data-filter="cyber"><i class="fas fa-shield-alt"></i> <span data-i18n="filter_cyber">Cybersécurité</span><span class="filter-count">3</span></button>
+<button class="filter-btn" data-filter="cloud"><i class="fas fa-cloud"></i> <span data-i18n="filter_cloud">Cloud & Virtualisation</span><span class="filter-count">3</span></button>
+<button class="filter-btn" data-filter="sys"><i class="fas fa-server"></i> <span data-i18n="filter_sys">Systèmes & Réseaux</span><span class="filter-count">2</span></button>
+<button class="filter-btn" data-filter="dev"><i class="fas fa-code"></i> <span data-i18n="filter_dev">Dev & DevOps</span><span class="filter-count">2</span></button>
+<button class="filter-btn" data-filter="ia"><i class="fas fa-robot"></i> <span data-i18n="filter_ia">IA & Nouvelles Tech</span><span class="filter-count">2</span></button>
+</div>
+<div class="veille-grid">
+<div class="veille-card cat-cyber fade-in" data-category="cyber"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-shield-alt"></i> <span data-i18n="cat_cyber">Cybersécurité</span></span><h3 class="veille-card-title" data-i18n="watch1_title">L'évolution des attaques par Ransomware</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch1_sub">Menaces & Malwares</span><p class="veille-description" data-i18n="watch1_desc">Analyse des nouvelles tendances des logiciels rançonneurs, notamment le modèle <strong>Ransomware-as-a-Service (RaaS)</strong>. Étude des stratégies de défense modernes : sauvegardes immuables, segmentation réseau, Zero Trust et plans de réponse aux incidents.</p><div class="veille-tags"><span class="veille-tag">Ransomware</span><span class="veille-tag">RaaS</span><span class="veille-tag">Zero Trust</span><span class="veille-tag">SOC</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Oct. 2025</span><a href="#" class="veille-source">ANSSI <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-cyber fade-in" data-category="cyber"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-shield-alt"></i> <span data-i18n="cat_cyber">Cybersécurité</span></span><h3 class="veille-card-title" data-i18n="watch2_title">Ingénierie sociale et phishing nouvelle génération</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch2_sub">Menaces Humaines</span><p class="veille-description" data-i18n="watch2_desc">Étude des attaques de <strong>phishing, spear-phishing et vishing</strong> amplifiées par l'IA générative. Analyse des techniques de deepfake vocal et des campagnes ciblées contre les entreprises.</p><div class="veille-tags"><span class="veille-tag">Phishing</span><span class="veille-tag">Deepfake</span><span class="veille-tag">OSINT</span><span class="veille-tag">Sensibilisation</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Nov. 2025</span><a href="#" class="veille-source">Cert-FR <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-cyber fade-in" data-category="cyber"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-shield-alt"></i> <span data-i18n="cat_cyber">Cybersécurité</span></span><h3 class="veille-card-title" data-i18n="watch3_title">Gestion des identités et Zero Trust</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch3_sub">Architecture Sécurité</span><p class="veille-description" data-i18n="watch3_desc">Exploration du modèle <strong>Zero Trust Architecture (ZTA)</strong> : "Never trust, always verify". Étude des solutions IAM, MFA, SSO et PAM.</p><div class="veille-tags"><span class="veille-tag">Zero Trust</span><span class="veille-tag">IAM</span><span class="veille-tag">MFA</span><span class="veille-tag">NIST</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Déc. 2025</span><a href="#" class="veille-source">NIST <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-cloud fade-in" data-category="cloud"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-cloud"></i> <span data-i18n="cat_cloud">Cloud & Virtualisation</span></span><h3 class="veille-card-title" data-i18n="watch4_title">Le passage au Cloud Hybride et Multi-Cloud</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch4_sub">Stratégies Cloud</span><p class="veille-description" data-i18n="watch4_desc">Observation des stratégies des entreprises combinant infrastructure <strong>On-Premise</strong> et services Cloud (Azure, AWS, GCP). Analyse des modèles IaaS, PaaS, SaaS.</p><div class="veille-tags"><span class="veille-tag">Azure</span><span class="veille-tag">AWS</span><span class="veille-tag">Hybride</span><span class="veille-tag">SecNumCloud</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Sept. 2025</span><a href="#" class="veille-source">Microsoft Learn <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-cloud fade-in" data-category="cloud"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-cloud"></i> <span data-i18n="cat_cloud">Cloud & Virtualisation</span></span><h3 class="veille-card-title" data-i18n="watch5_title">Conteneurisation avec Docker et Kubernetes</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch5_sub">Virtualisation Moderne</span><p class="veille-description" data-i18n="watch5_desc">Étude de la conteneurisation comme alternative aux machines virtuelles. Comparaison <strong>Docker vs VM</strong>, orchestration avec Kubernetes.</p><div class="veille-tags"><span class="veille-tag">Docker</span><span class="veille-tag">Kubernetes</span><span class="veille-tag">Microservices</span><span class="veille-tag">Podman</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Oct. 2025</span><a href="#" class="veille-source">Docker Docs <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-cloud fade-in" data-category="cloud"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-cloud"></i> <span data-i18n="cat_cloud">Cloud & Virtualisation</span></span><h3 class="veille-card-title" data-i18n="watch6_title">L'essor du Serverless Computing</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch6_sub">Cloud Natif</span><p class="veille-description" data-i18n="watch6_desc">Analyse du modèle <strong>Serverless</strong> (AWS Lambda, Azure Functions) : avantages et limites. Cas d'usage concrets.</p><div class="veille-tags"><span class="veille-tag">Serverless</span><span class="veille-tag">AWS Lambda</span><span class="veille-tag">Azure Functions</span><span class="veille-tag">FaaS</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Nov. 2025</span><a href="#" class="veille-source">AWS Blog <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-sys fade-in" data-category="sys"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-server"></i> <span data-i18n="cat_sys">Systèmes & Réseaux</span></span><h3 class="veille-card-title" data-i18n="watch7_title">L'IA au service de l'administration système</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch7_sub">AIOps & Automatisation</span><p class="veille-description" data-i18n="watch7_desc">Étude sur l'utilisation de l'<strong>intelligence artificielle</strong> pour l'automatisation des tâches répétitives et la détection d'anomalies réseau.</p><div class="veille-tags"><span class="veille-tag">AIOps</span><span class="veille-tag">Automatisation</span><span class="veille-tag">Monitoring</span><span class="veille-tag">Chatbots</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Déc. 2025</span><a href="#" class="veille-source">Gartner <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-sys fade-in" data-category="sys"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-server"></i> <span data-i18n="cat_sys">Systèmes & Réseaux</span></span><h3 class="veille-card-title" data-i18n="watch8_title">Le déploiement progressif de l'IPv6</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch8_sub">Protocoles Réseau</span><p class="veille-description" data-i18n="watch8_desc">Suivi de l'adoption mondiale de l'<strong>IPv6</strong> : état des lieux, transition IPv4/IPv6 (dual-stack, tunneling).</p><div class="veille-tags"><span class="veille-tag">IPv6</span><span class="veille-tag">Dual-Stack</span><span class="veille-tag">RIPE</span><span class="veille-tag">Transition</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Jan. 2026</span><a href="#" class="veille-source">APNIC <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-dev fade-in" data-category="dev"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-code"></i> <span data-i18n="cat_dev">Dev & DevOps</span></span><h3 class="veille-card-title" data-i18n="watch9_title">CI/CD et pipelines DevOps modernes</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch9_sub">Automatisation du Déploiement</span><p class="veille-description" data-i18n="watch9_desc">Exploration des pratiques <strong>DevOps</strong> : intégration continue, déploiement continu, Infrastructure as Code avec Terraform et Ansible.</p><div class="veille-tags"><span class="veille-tag">CI/CD</span><span class="veille-tag">Terraform</span><span class="veille-tag">Ansible</span><span class="veille-tag">GitLab</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Oct. 2025</span><a href="#" class="veille-source">Atlassian <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-dev fade-in" data-category="dev"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-code"></i> <span data-i18n="cat_dev">Dev & DevOps</span></span><h3 class="veille-card-title" data-i18n="watch10_title">GitOps et gestion de configuration</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch10_sub">Gestion d'Infrastructure</span><p class="veille-description" data-i18n="watch10_desc">Étude du paradigme <strong>GitOps</strong> : utiliser Git comme source unique de vérité pour l'infrastructure. Outils comme ArgoCD et Flux.</p><div class="veille-tags"><span class="veille-tag">GitOps</span><span class="veille-tag">ArgoCD</span><span class="veille-tag">IaC</span><span class="veille-tag">Git</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Nov. 2025</span><a href="#" class="veille-source">Red Hat <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-ia fade-in" data-category="ia"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-robot"></i> <span data-i18n="cat_ia">IA & Nouvelles Tech</span></span><h3 class="veille-card-title" data-i18n="watch11_title">L'IA générative dans le quotidien de l'IT</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch11_sub">Intelligence Artificielle</span><p class="veille-description" data-i18n="watch11_desc">Impact des outils d'<strong>IA générative</strong> (ChatGPT, Copilot, Claude) sur le travail des administrateurs système et développeurs.</p><div class="veille-tags"><span class="veille-tag">ChatGPT</span><span class="veille-tag">Copilot</span><span class="veille-tag">LLM</span><span class="veille-tag">Productivité</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Déc. 2025</span><a href="#" class="veille-source">OpenAI <i class="fas fa-arrow-right"></i></a></div></div></div>
+<div class="veille-card cat-ia fade-in" data-category="ia"><div class="veille-card-header"><span class="veille-category"><i class="fas fa-robot"></i> <span data-i18n="cat_ia">IA & Nouvelles Tech</span></span><h3 class="veille-card-title" data-i18n="watch12_title">Edge Computing et IoT industriel</h3></div><div class="veille-card-body"><span class="veille-subcategory" data-i18n="watch12_sub">Technologies Émergentes</span><p class="veille-description" data-i18n="watch12_desc">Analyse du <strong>Edge Computing</strong> : traitement des données au plus près de la source pour réduire la latence. Applications dans l'IoT industriel.</p><div class="veille-tags"><span class="veille-tag">Edge Computing</span><span class="veille-tag">IoT</span><span class="veille-tag">5G</span><span class="veille-tag">IIoT</span></div><div class="veille-meta"><span class="veille-date"><i class="far fa-calendar"></i> Jan. 2026</span><a href="#" class="veille-source">IEEE <i class="fas fa-arrow-right"></i></a></div></div></div>
+</div>
+<div class="outils-veille fade-in">
+<h3 class="section-title" style="font-size: 1.8rem;" data-i18n="tools_title">Mes Outils de Veille</h3>
+<p class="section-subtitle" data-i18n="tools_subtitle">Les outils que j'utilise au quotidien pour collecter, organiser et analyser l'information</p>
+<div class="outils-grid">
+<div class="outil-card"><div class="outil-icon"><i class="fas fa-rss"></i></div><h3>Feedly</h3><p data-i18n="tool1_desc">Agrégateur de flux RSS pour suivre blogs techniques et revues spécialisées.</p></div>
+<div class="outil-card"><div class="outil-icon"><i class="fas fa-bookmark"></i></div><h3>Pocket</h3><p data-i18n="tool2_desc">Sauvegarde et organisation des articles intéressants pour une lecture ultérieure.</p></div>
+<div class="outil-card"><div class="outil-icon"><i class="fab fa-twitter"></i></div><h3>X (Twitter)</h3><p data-i18n="tool3_desc">Suivi d'experts et communautés tech pour des informations en temps réel.</p></div>
+<div class="outil-card"><div class="outil-icon"><i class="fab fa-youtube"></i></div><h3>YouTube</h3><p data-i18n="tool4_desc">Chaînes techniques (NetworkChuck, IT-Connect) pour des tutoriels et conférences.</p></div>
+<div class="outil-card"><div class="outil-icon"><i class="fab fa-linkedin"></i></div><h3>LinkedIn</h3><p data-i18n="tool5_desc">Suivi de professionnels et newsletters du secteur IT.</p></div>
+<div class="outil-card"><div class="outil-icon"><i class="fab fa-github"></i></div><h3>GitHub</h3><p data-i18n="tool6_desc">Suivi des projets open source et tendances du développement.</p></div>
+</div>
+</div>
+<div class="methodologie fade-in">
+<h3 data-i18n="method_title">Ma Méthodologie de Veille</h3>
+<p style="text-align: center; color: #888; max-width: 700px; margin: 0 auto;" data-i18n="method_desc">Une démarche structurée en 4 étapes pour transformer l'information brute en connaissances exploitables</p>
+<div class="method-steps">
+<div class="method-step"><div class="method-step-number">1</div><h4 data-i18n="step1_title">Définir</h4><p data-i18n="step1_desc">Sélection des thématiques stratégiques et des mots-clés pertinents pour mon domaine (SISR).</p></div>
+<div class="method-step"><div class="method-step-number">2</div><h4 data-i18n="step2_title">Collecter</h4><p data-i18n="step2_desc">Mise en place de sources fiables et variées : flux RSS, newsletters, réseaux sociaux professionnels.</p></div>
+<div class="method-step"><div class="method-step-number">3</div><h4 data-i18n="step3_title">Analyser</h4><p data-i18n="step3_desc">Filtrage, vérification de la fiabilité des sources et synthèse des informations pertinentes.</p></div>
+<div class="method-step"><div class="method-step-number">4</div><h4 data-i18n="step4_title">Diffuser</h4><p data-i18n="step4_desc">Partage des connaissances via ce portfolio, présentations et documentation technique.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="tab-content">
+<h2 class="section-title fade-in" data-i18n="contact_title">Me Contacter</h2>
+<p class="section-subtitle fade-in" data-i18n="contact_subtitle">Une question, une opportunité ? N'hésitez pas à me contacter</p>
+<div class="contact-container">
+<div class="contact-info fade-in">
+<h3 data-i18n="contact_info_title">Coordonnées</h3>
+<div class="contact-item"><i class="fas fa-envelope"></i><div><strong>Email</strong><p></p></div></div>
+<div class="contact-item"><i class="fab fa-linkedin"></i><div><strong>LinkedIn</strong><p></p></div></div>
+<div class="contact-item"><i class="fab fa-github"></i><div><strong>GitHub</strong><p></p></div></div>
+<div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong data-i18n="contact_location">Localisation</strong><p>Reims, France</p></div></div>
+</div>
+<div class="contact-form fade-in">
+<h3 data-i18n="contact_form_title">Envoyez-moi un message</h3>
+<form onsubmit="event.preventDefault(); alert('Message envoyé ! (Simulation)');">
+<div class="form-group"><label data-i18n="form_name">Nom complet</label><input type="text" placeholder="Votre nom" required></div>
+<div class="form-group"><label data-i18n="form_email">Email</label><input type="email" placeholder="Votre email" required></div>
+<div class="form-group"><label data-i18n="form_subject">Sujet</label><input type="text" placeholder="Sujet du message" required></div>
+<div class="form-group"><label data-i18n="form_message">Message</label><textarea placeholder="Votre message..." required></textarea></div>
+<button type="submit" class="btn" style="width: 100%;"><i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> <span data-i18n="form_submit">Envoyer le message</span></button>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-ascii" id="footerAscii"></div>
+<div class="social-links">
+<a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+<a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+<a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+</div>
+<p>&copy; 2026 Benjamin MEDVEDEV. Tous droits réservés.</p>
+<p style="margin-top: 1rem; opacity: 0.7; font-size: 0.85rem; font-family: 'Fira Code', monospace;">Portfolio BTS SIO option SISR</p>
+<div class="uptime-badge" id="uptimeBadge">⚡ Site uptime: calculating...</div>
+</footer>
+
+<!-- Status Panel -->
+<div class="status-panel" id="statusPanel">
+<div class="status-row"><span class="status-label"><span class="status-dot"></span>STATUS</span><span class="status-text">ONLINE</span></div>
+<div class="status-row"><span class="status-label">LANG</span><span class="status-text" id="statusLang">FR</span></div>
+<div class="status-row"><span class="status-label">THEME</span><span class="status-text" id="statusTheme">DARK</span></div>
+<div class="status-row"><span class="status-label">UPTIME</span><span class="status-text" id="statusUptime">0s</span></div>
+<div class="status-row"><span class="status-label">ACHIEV.</span><span class="status-text" id="statusAchievements">0/8</span></div>
+</div>
+
+<!-- Achievements Toggle -->
+<button class="achievements-toggle" id="achievementsToggle" title="Achievements">
+<i class="fas fa-trophy"></i>
+<span class="badge-count" id="badgeCount">0</span>
+</button>
+
+<!-- Achievements Panel -->
+<div class="achievements-panel" id="achievementsPanel">
+<h3><i class="fas fa-trophy"></i> Achievements</h3>
+<div id="achievementsList"></div>
+</div>
+
+<!-- Return to top -->
+<button class="return-top" id="returnTop" title="Retour en haut">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// ============================================
+// BOOT SEQUENCE
+// ============================================
+const bootLines = [
+{ text: 'BIOS v2.4.1 - Portfolio System', cls: 'ok', delay: 0 },
+{ text: 'Initializing memory... 640K OK', cls: 'ok', delay: 150 },
+{ text: 'Detecting hardware...', cls: 'ok', delay: 300 },
+{ text: '  CPU: Benjamin Brain @ 2.3GHz', cls: 'ok', delay: 450 },
+{ text: '  RAM: 16GB Creative Energy', cls: 'ok', delay: 550 },
+{ text: '  GPU: Imagination RTX 4090', cls: 'ok', delay: 650 },
+{ text: 'Loading kernel modules...', cls: 'ok', delay: 800 },
+{ text: '  [OK] networking.sys', cls: 'ok', delay: 900 },
+{ text: '  [OK] cybersecurity.mod', cls: 'ok', delay: 980 },
+{ text: '  [OK] webdev.driver', cls: 'ok', delay: 1060 },
+{ text: '  [OK] databases.service', cls: 'ok', delay: 1140 },
+{ text: 'Mounting filesystems...', cls: 'ok', delay: 1300 },
+{ text: 'Starting portfolio.service...', cls: 'warn', delay: 1450 },
+{ text: '✓ Ready. Welcome, user.', cls: 'ok', delay: 1600 },
+];
+
+const bootOverlay = document.getElementById('bootOverlay');
+bootLines.forEach((line, i) => {
+setTimeout(() => {
+const div = document.createElement('div');
+div.className = 'boot-line ' + line.cls;
+div.textContent = '> ' + line.text;
+bootOverlay.appendChild(div);
+bootOverlay.scrollTop = bootOverlay.scrollHeight;
+if (i === bootLines.length - 1) {
+const cursor = document.createElement('span');
+cursor.className = 'boot-cursor';
+div.appendChild(cursor);
+setTimeout(() => {
+bootOverlay.classList.add('fade-out');
+setTimeout(() => bootOverlay.style.display = 'none', 500);
+// Démarrer les logs après le boot
+setTimeout(() => {
+document.getElementById('liveLogs').classList.add('active');
+startLiveLogs();
+}, 1000);
+}, 400);
+}
+}, line.delay);
+});
+
+// ============================================
+// CURSEUR PERSONNALISÉ
+// ============================================
+const cursor = document.getElementById('customCursor');
+const cursorDot = document.getElementById('customCursorDot');
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+mouseX = e.clientX;
+mouseY = e.clientY;
+cursorDot.style.left = mouseX + 'px';
+cursorDot.style.top = mouseY + 'px';
+});
+
+function animateCursor() {
+cursorX += (mouseX - cursorX) * 0.15;
+cursorY += (mouseY - cursorY) * 0.15;
+cursor.style.left = cursorX + 'px';
+cursor.style.top = cursorY + 'px';
+requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+document.querySelectorAll('a, button, .skill-card, .project-card, .veille-card, .filter-btn, input, textarea').forEach(el => {
+el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+});
+
+// ============================================
+// BARRE DE PROGRESSION SCROLL
+// ============================================
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+const scrollTop = window.scrollY;
+const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+const scrollPercent = (scrollTop / docHeight) * 100;
+scrollProgress.style.width = scrollPercent + '%';
+});
+
+// ============================================
+// HORLOGE TEMPS RÉEL
+// ============================================
+function updateClock() {
+const now = new Date();
+const h = String(now.getHours()).padStart(2, '0');
+const m = String(now.getMinutes()).padStart(2, '0');
+const s = String(now.getSeconds()).padStart(2, '0');
+document.getElementById('liveClock').textContent = `${h}:${m}:${s}`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// ============================================
+// EFFET TYPING SUR LE SOUS-TITRE
+// ============================================
+const typingPhrases = [
+'Étudiant en Systèmes et Réseaux',
+'Passionné par la cybersécurité',
+'Administrateur en devenir',
+'Veilleur technologique',
+'Futur expert SISR'
+];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingText = document.getElementById('typingText');
+
+function typeEffect() {
+const current = typingPhrases[phraseIndex];
+if (isDeleting) {
+typingText.textContent = current.substring(0, charIndex - 1);
+charIndex--;
+} else {
+typingText.textContent = current.substring(0, charIndex + 1);
+charIndex++;
+}
+
+let speed = isDeleting ? 30 : 80;
+
+if (!isDeleting && charIndex === current.length) {
+speed = 2000;
+isDeleting = true;
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+speed = 500;
+}
+
+setTimeout(typeEffect, speed);
+}
+typeEffect();
+
+// ============================================
+// PARTICULES INTERACTIVES
+// ============================================
+const particleCanvas = document.getElementById('particleCanvas');
+const pCtx = particleCanvas.getContext('2d');
+let particles = [];
+
+function resizeParticleCanvas() {
+const hero = document.getElementById('accueil');
+particleCanvas.width = hero.offsetWidth;
+particleCanvas.height = hero.offsetHeight;
+}
+
+function initParticles() {
+resizeParticleCanvas();
+particles = [];
+const count = Math.min(80, Math.floor(particleCanvas.width / 15));
+for (let i = 0; i < count; i++) {
+particles.push({
+x: Math.random() * particleCanvas.width,
+y: Math.random() * particleCanvas.height,
+vx: (Math.random() - 0.5) * 0.5,
+vy: (Math.random() - 0.5) * 0.5,
+size: Math.random() * 2 + 1,
+});
+}
+}
+
+function animateParticles() {
+pCtx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+particles.forEach((p, i) => {
+p.x += p.vx;
+p.y += p.vy;
+
+if (p.x < 0 || p.x > particleCanvas.width) p.vx *= -1;
+if (p.y < 0 || p.y > particleCanvas.height) p.vy *= -1;
+
+// Interaction avec la souris
+const dx = mouseX - p.x;
+const dy = mouseY - p.y;
+const dist = Math.sqrt(dx * dx + dy * dy);
+if (dist < 100) {
+p.x -= dx * 0.02;
+p.y -= dy * 0.02;
+}
+
+pCtx.fillStyle = getComputedStyle(document.body).getPropertyValue('--primary').trim() || '#00ff88';
+pCtx.globalAlpha = 0.6;
+pCtx.beginPath();
+pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+pCtx.fill();
+
+// Lignes entre particules proches
+for (let j = i + 1; j < particles.length; j++) {
+const p2 = particles[j];
+const d = Math.sqrt((p.x - p2.x) ** 2 + (p.y - p2.y) ** 2);
+if (d < 100) {
+pCtx.strokeStyle = getComputedStyle(document.body).getPropertyValue('--primary').trim() || '#00ff88';
+pCtx.globalAlpha = 0.2 * (1 - d / 100);
+pCtx.lineWidth = 0.5;
+pCtx.beginPath();
+pCtx.moveTo(p.x, p.y);
+pCtx.lineTo(p2.x, p2.y);
+pCtx.stroke();
+}
+}
+});
+requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+window.addEventListener('resize', initParticles);
+
+// ============================================
+// TERMINAL INTERACTIF
+// ============================================
+const terminalInput = document.getElementById('terminalInput');
+const terminalBody = document.getElementById('terminalBody');
+
+const terminalCommands = {
+help: () => `Available commands:
+  <strong>help</strong>      - Show this help
+  <strong>whoami</strong>    - Who is Benjamin?
+  <strong>skills</strong>    - List my skills
+  <strong>projects</strong>  - List my projects
+  <strong>contact</strong>   - Get my contact info
+  <strong>date</strong>      - Show current date/time
+  <strong>uptime</strong>    - Show site uptime
+  <strong>neofetch</strong>  - System info
+  <strong>matrix</strong>    - Enter the Matrix
+  <strong>hack</strong>      - Try to hack the system
+  <strong>sudo</strong>      - Try it...
+  <strong>exit</strong>      - Close terminal
+  <strong>clear</strong>     - Clear terminal`,
+
+whoami: () => {
+unlockAchievement('explorer');
+return `<strong>Benjamin MEDVEDEV</strong>
+23 years old | Nancy, France
+BTS SIO SISR @ CNED (2025-2026)
+Passionate about systems, networks & cybersecurity.
+Always learning, always building.`;
+},
+
+skills: () => `<span class="highlight">[Skills]</span>
+  <span class="info">▸</span> Network Administration
+  <span class="info"></span> Cybersecurity
+  <span class="info"></span> Web Development
+  <span class="info">▸</span> Databases (MySQL/MariaDB)
+  <span class="info"></span> Project Management`,
+
+projects: () => `<span class="highlight">[Projects]</span>
+  <span class="info">[1]</span> Active Directory Domain
+  <span class="info">[2]</span> PfSense Firewall
+  <span class="info">[3]</span> LAMP Web Server`,
+
+contact: () => `<span class="highlight">[Contact]</span>
+  <span class="info">✉</span> benjamin.medvedev@email.com
+  <span class="info">in</span> linkedin.com/in/benjamin-medvedev
+  <span class="info"></span> github.com/benjamin-medvedev
+  <span class="info"></span> Nancy, France`,
+
+date: () => `Current date: <strong>${new Date().toLocaleString('fr-FR')}</strong>`,
+
+uptime: () => {
+const uptime = Math.floor((Date.now() - siteStartTime) / 1000);
+const h = Math.floor(uptime / 3600);
+const m = Math.floor((uptime % 3600) / 60);
+const s = uptime % 60;
+return `Site uptime: <strong>${h}h ${m}m ${s}s</strong>`;
+},
+
+neofetch: () => {
+const ascii = `
+<span class="highlight">    ___    </span>  <strong>benjamin</strong>@<strong>portfolio</strong>
+<span class="highlight">   /   \\   </span>  -------------------
+<span class="highlight">  |  O  |  </span>  <span class="info">OS:</span> Portfolio OS 2.0
+<span class="highlight">  |  _  |  </span>  <span class="info">Host:</span> CNED
+<span class="highlight">   \\___/   </span>  <span class="info">Kernel:</span> BTS-SIO-SISR
+<span class="highlight">    | |    </span>  <span class="info">Uptime:</span> since 2025
+<span class="highlight">    |_|    </span>  <span class="info">Shell:</span> benjamin-sh
+             <span class="info">Theme:</span> ${document.body.classList.contains('light-mode') ? 'light' : 'dark'}-neon
+             <span class="info">Terminal:</span> portfolio-term v2.0
+`;
+return ascii;
+},
+
+matrix: () => {
+triggerMatrix();
+return '<span class="highlight">Entering the Matrix... Wake up, Neo.</span>';
+},
+
+hack: () => {
+startHackGame();
+return '<span class="highlight">[WARNING]</span> Initiating hack sequence... Type numbers as they appear!';
+},
+
+sudo: () => {
+unlockAchievement('sudo');
+return '<span class="highlight">Nice try</span>  User is not in the sudoers file. This incident will be reported.';
+},
+
+exit: () => '<span class="highlight">You can\'t leave yet! There\'s too much to explore here.</span>',
+
+clear: () => {
+const lines = terminalBody.querySelectorAll('.terminal-line');
+lines.forEach(l => l.remove());
+return null;
+}
+};
+
+function addTerminalLine(html, isCommand = false, commandText = '') {
+const line = document.createElement('div');
+line.className = 'terminal-line';
+if (isCommand) {
+line.innerHTML = `<span class="prompt">$</span> <span class="command">${commandText}</span>`;
+} else {
+line.innerHTML = `<span class="output">${html}</span>`;
+}
+const inputLine = terminalBody.querySelector('.terminal-input-line');
+terminalBody.insertBefore(line, inputLine);
+terminalBody.scrollTop = terminalBody.scrollHeight;
+}
+
+terminalInput.addEventListener('keydown', (e) => {
+if (e.key === 'Enter') {
+const cmd = terminalInput.value.trim().toLowerCase();
+if (cmd) {
+addTerminalLine('', true, cmd);
+if (terminalCommands[cmd]) {
+const result = terminalCommands[cmd]();
+if (result !== null) {
+setTimeout(() => addTerminalLine(result), 100);
+}
+} else {
+addTerminalLine(`<span class="error">Command not found:</span> ${cmd}. Type 'help' for available commands.`);
+}
+}
+terminalInput.value = '';
+}
+});
+
+terminalBody.addEventListener('click', () => terminalInput.focus());
+
+// ============================================
+// MINI JEU "HACK THE SYSTEM"
+// ============================================
+let hackGameActive = false;
+let hackScore = 0;
+let hackTarget = 0;
+
+function startHackGame() {
+hackGameActive = true;
+hackScore = 0;
+nextHackTarget();
+}
+
+function nextHackTarget() {
+if (!hackGameActive) return;
+hackTarget = Math.floor(Math.random() * 9000) + 1000;
+addTerminalLine(`<span class="info">[HACK]</span> Decrypt: <strong class="highlight">${hackTarget}</strong> - Type it now!`);
+
+setTimeout(() => {
+if (hackGameActive && terminalInput.value.trim() !== String(hackTarget)) {
+hackGameActive = false;
+addTerminalLine(`<span class="error">[FAILED]</span> Hack attempt failed. Score: ${hackScore}`);
+addTerminalLine(`<span class="info">Type 'hack' to try again.</span>`);
+}
+}, 3000);
+}
+
+terminalInput.addEventListener('input', () => {
+if (hackGameActive && terminalInput.value.trim() === String(hackTarget)) {
+hackScore++;
+hackGameActive = false;
+addTerminalLine(`<span class="success">[SUCCESS]</span> Decrypted! Score: ${hackScore}/1`);
+if (hackScore >= 1) {
+unlockAchievement('hacker');
+addTerminalLine(`<span class="highlight">[ACHIEVEMENT UNLOCKED]</span>  First Hack!`);
+}
+addTerminalLine(`<span class="info">Type 'hack' to play again.</span>`);
+}
+});
+
+// ============================================
+// MATRIX EFFECT
+// ============================================
+const matrixCanvas = document.getElementById('matrixCanvas');
+const matrixCtx = matrixCanvas.getContext('2d');
+let matrixInterval;
+
+function triggerMatrix() {
+matrixCanvas.classList.add('active');
+matrixCanvas.width = window.innerWidth;
+matrixCanvas.height = window.innerHeight;
+const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF';
+const fontSize = 14;
+const columns = matrixCanvas.width / fontSize;
+const drops = Array(Math.floor(columns)).fill(1);
+
+matrixCtx.fillStyle = '#000';
+matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+
+matrixInterval = setInterval(() => {
+matrixCtx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+matrixCtx.fillStyle = '#00ff88';
+matrixCtx.font = fontSize + 'px monospace';
+
+for (let i = 0; i < drops.length; i++) {
+const text = chars[Math.floor(Math.random() * chars.length)];
+matrixCtx.fillText(text, i * fontSize, drops[i] * fontSize);
+if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975) {
+drops[i] = 0;
+}
+drops[i]++;
+}
+}, 33);
+
+setTimeout(() => {
+clearInterval(matrixInterval);
+matrixCanvas.classList.remove('active');
+}, 5000);
+}
+
+// ============================================
+// KONAMI CODE
+// ============================================
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+if (e.key === konamiCode[konamiIndex]) {
+konamiIndex++;
+if (konamiIndex === konamiCode.length) {
+triggerMatrix();
+unlockAchievement('konami');
+konamiIndex = 0;
+}
+} else {
+konamiIndex = 0;
+}
+});
+
+// ============================================
+// GESTION DES ONGLETS
+// ============================================
+const tabLinks = document.querySelectorAll('.tab-link');
+const tabContents = document.querySelectorAll('.tab-content');
+tabLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+tabLinks.forEach(l => l.classList.remove('active'));
+tabContents.forEach(c => c.classList.remove('active'));
+link.classList.add('active');
+const tabId = link.getAttribute('data-tab');
+const targetContent = document.getElementById(tabId);
+if (targetContent) targetContent.classList.add('active');
+document.getElementById('nav-menu').classList.remove('active');
+setTimeout(() => checkScrollAnimations(), 100);
+});
+});
+
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+// ============================================
+// MODE SOMBRE/CLAIR
+// ============================================
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+const statusTheme = document.getElementById('statusTheme');
+
+if (localStorage.getItem('theme') === 'light') {
+document.body.classList.add('light-mode');
+themeIcon.classList.remove('fa-moon');
+themeIcon.classList.add('fa-sun');
+statusTheme.textContent = 'LIGHT';
+}
+
+themeToggle.addEventListener('click', () => {
+document.body.classList.toggle('light-mode');
+const isLight = document.body.classList.contains('light-mode');
+themeIcon.classList.toggle('fa-moon');
+themeIcon.classList.toggle('fa-sun');
+statusTheme.textContent = isLight ? 'LIGHT' : 'DARK';
+localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// ============================================
+// TRADUCTIONS
+// ============================================
+const translations = {
+fr: {
+nav_home: 'Accueil', nav_skills: 'Compétences', nav_projects: 'Projets', nav_experience: 'Expériences', nav_watch: 'Veille', nav_contact: 'Contact',
+hero_title: 'Benjamin MEDVEDEV',
+hero_desc: 'Passionné par l\'informatique, je transforme les défis techniques en solutions innovantes',
+hero_intro: 'Actuellement en 2ème année de BTS SIO option SISR au CNED, je me spécialise dans l\'administration des systèmes et réseaux d\'entreprise. Mon parcours m\'a permis de développer des compétences solides en cybersécurité, virtualisation et gestion d\'infrastructures (Windows Server, Linux, PfSense). Rigoureux et curieux, je cherche constamment à me perfectionner pour concevoir des environnements IT performants, sécurisés et résilients.',
+hero_btn: 'Découvrir ma veille technologique',
+skills_title: 'Mes Compétences', skills_subtitle: 'Un ensemble de compétences techniques acquises durant ma formation BTS SIO SISR',
+skill1_title: 'Administration Réseau', skill1_desc: 'Configuration de routeurs, commutateurs, Active Directory et services Windows/Linux',
+skill2_title: 'Cybersécurité', skill2_desc: 'Pare-feu, gestion des accès, sensibilisation aux bonnes pratiques de sécurité',
+skill3_title: 'Développement Web', skill3_desc: 'Création de sites web (HTML, CSS, PHP, JavaScript) et interfaces d\'administration',
+skill4_title: 'Bases de Données', skill4_desc: 'Conception et administration de bases MySQL, MariaDB',
+skill5_title: 'Gestion de Projet', skill5_desc: 'Planification, cahier des charges, méthode Agile et collaboration en équipe',
+projects_title: 'Projets Réalisés', projects_subtitle: 'Découvrez mes principales réalisations techniques durant ma formation',
+project1_title: 'Mise en place d\'un domaine Active Directory', project1_desc: 'Installation et configuration d\'un contrôleur de domaine, gestion des GPO et profils utilisateurs itinérants.',
+project2_title: 'Configuration d\'un pare-feu PfSense', project2_desc: 'Solution de sécurité périmétrique avec règles de filtrage, NAT et VPN pour l\'accès distant sécurisé.',
+project3_title: 'Déploiement d\'un serveur Web LAMP', project3_desc: 'Stack Linux, Apache, MySQL, PHP. Hébergement d\'un site web dynamique avec gestion de base de données.',
+exp_title: 'Expériences Professionnelles', exp_subtitle: 'Mon parcours professionnel et mes projets académiques',
+exp1_title: 'Technicien Réseau et Systèmes (Stagiaire)', exp1_desc: 'Assistance aux utilisateurs, maintenance du parc informatique, migration des serveurs et rédaction de procédures techniques.',
+exp2_title: 'Projet Tutoré : Audit de sécurité', exp2_desc: 'Audit de sécurité d\'infrastructure, identification des vulnérabilités et proposition de plans de remédiation.',
+watch_title: 'Veille Technologique', watch_subtitle: 'Une veille active et structurée sur les principales thématiques de l\'informatique moderne',
+stat1_label: 'Catégories suivies', stat2_label: 'Sujets approfondis', stat3_label: 'Sources actives', stat4_label: 'De veille continue',
+filter_all: 'Toutes', filter_cyber: 'Cybersécurité', filter_cloud: 'Cloud & Virtualisation', filter_sys: 'Systèmes & Réseaux', filter_dev: 'Dev & DevOps', filter_ia: 'IA & Nouvelles Tech',
+cat_cyber: 'Cybersécurité', cat_cloud: 'Cloud & Virtualisation', cat_sys: 'Systèmes & Réseaux', cat_dev: 'Dev & DevOps', cat_ia: 'IA & Nouvelles Tech',
+watch1_title: 'L\'évolution des attaques par Ransomware', watch1_sub: 'Menaces & Malwares',
+watch1_desc: 'Analyse des nouvelles tendances des logiciels rançonneurs, notamment le modèle <strong>Ransomware-as-a-Service (RaaS)</strong>. Étude des stratégies de défense modernes : sauvegardes immuables, segmentation réseau, Zero Trust et plans de réponse aux incidents.',
+watch2_title: 'Ingénierie sociale et phishing nouvelle génération', watch2_sub: 'Menaces Humaines',
+watch2_desc: 'Étude des attaques de <strong>phishing, spear-phishing et vishing</strong> amplifiées par l\'IA générative. Analyse des techniques de deepfake vocal et des campagnes ciblées contre les entreprises.',
+watch3_title: 'Gestion des identités et Zero Trust', watch3_sub: 'Architecture Sécurité',
+watch3_desc: 'Exploration du modèle <strong>Zero Trust Architecture (ZTA)</strong> : "Never trust, always verify". Étude des solutions IAM, MFA, SSO et PAM.',
+watch4_title: 'Le passage au Cloud Hybride et Multi-Cloud', watch4_sub: 'Stratégies Cloud',
+watch4_desc: 'Observation des stratégies des entreprises combinant infrastructure <strong>On-Premise</strong> et services Cloud (Azure, AWS, GCP). Analyse des modèles IaaS, PaaS, SaaS.',
+watch5_title: 'Conteneurisation avec Docker et Kubernetes', watch5_sub: 'Virtualisation Moderne',
+watch5_desc: 'Étude de la conteneurisation comme alternative aux machines virtuelles. Comparaison <strong>Docker vs VM</strong>, orchestration avec Kubernetes.',
+watch6_title: 'L\'essor du Serverless Computing', watch6_sub: 'Cloud Natif',
+watch6_desc: 'Analyse du modèle <strong>Serverless</strong> (AWS Lambda, Azure Functions) : avantages et limites. Cas d\'usage concrets.',
+watch7_title: 'L\'IA au service de l\'administration système', watch7_sub: 'AIOps & Automatisation',
+watch7_desc: 'Étude sur l\'utilisation de l\'<strong>intelligence artificielle</strong> pour l\'automatisation des tâches répétitives et la détection d\'anomalies réseau.',
+watch8_title: 'Le déploiement progressif de l\'IPv6', watch8_sub: 'Protocoles Réseau',
+watch8_desc: 'Suivi de l\'adoption mondiale de l\'<strong>IPv6</strong> : état des lieux, transition IPv4/IPv6 (dual-stack, tunneling).',
+watch9_title: 'CI/CD et pipelines DevOps modernes', watch9_sub: 'Automatisation du Déploiement',
+watch9_desc: 'Exploration des pratiques <strong>DevOps</strong> : intégration continue, déploiement continu, Infrastructure as Code avec Terraform et Ansible.',
+watch10_title: 'GitOps et gestion de configuration', watch10_sub: 'Gestion d\'Infrastructure',
+watch10_desc: 'Étude du paradigme <strong>GitOps</strong> : utiliser Git comme source unique de vérité pour l\'infrastructure. Outils comme ArgoCD et Flux.',
+watch11_title: 'L\'IA générative dans le quotidien de l\'IT', watch11_sub: 'Intelligence Artificielle',
+watch11_desc: 'Impact des outils d\'<strong>IA générative</strong> (ChatGPT, Copilot, Claude) sur le travail des administrateurs système et développeurs.',
+watch12_title: 'Edge Computing et IoT industriel', watch12_sub: 'Technologies Émergentes',
+watch12_desc: 'Analyse du <strong>Edge Computing</strong> : traitement des données au plus près de la source pour réduire la latence. Applications dans l\'IoT industriel.',
+tools_title: 'Mes Outils de Veille', tools_subtitle: 'Les outils que j\'utilise au quotidien pour collecter, organiser et analyser l\'information',
+tool1_desc: 'Agrégateur de flux RSS pour suivre blogs techniques et revues spécialisées.',
+tool2_desc: 'Sauvegarde et organisation des articles intéressants pour une lecture ultérieure.',
+tool3_desc: 'Suivi d\'experts et communautés tech pour des informations en temps réel.',
+tool4_desc: 'Chaînes techniques (NetworkChuck, IT-Connect) pour des tutoriels et conférences.',
+tool5_desc: 'Suivi de professionnels et newsletters du secteur IT.',
+tool6_desc: 'Suivi des projets open source et tendances du développement.',
+method_title: 'Ma Méthodologie de Veille', method_desc: 'Une démarche structurée en 4 étapes pour transformer l\'information brute en connaissances exploitables',
+step1_title: 'Définir', step1_desc: 'Sélection des thématiques stratégiques et des mots-clés pertinents pour mon domaine (SISR).',
+step2_title: 'Collecter', step2_desc: 'Mise en place de sources fiables et variées : flux RSS, newsletters, réseaux sociaux professionnels.',
+step3_title: 'Analyser', step3_desc: 'Filtrage, vérification de la fiabilité des sources et synthèse des informations pertinentes.',
+step4_title: 'Diffuser', step4_desc: 'Partage des connaissances via ce portfolio, présentations et documentation technique.',
+contact_title: 'Me Contacter', contact_subtitle: 'Une question, une opportunité ? N\'hésitez pas à me contacter',
+contact_info_title: 'Coordonnées', contact_location: 'Localisation',
+contact_form_title: 'Envoyez-moi un message',
+form_name: 'Nom complet', form_email: 'Email', form_subject: 'Sujet', form_message: 'Message', form_submit: 'Envoyer le message'
+},
+en: {
+nav_home: 'Home', nav_skills: 'Skills', nav_projects: 'Projects', nav_experience: 'Experience', nav_watch: 'Watch', nav_contact: 'Contact',
+hero_title: 'Benjamin MEDVEDEV',
+hero_desc: 'Passionate about computing, I transform technical challenges into innovative solutions',
+hero_intro: 'Currently in my 2nd year of BTS SIO option SISR at CNED, I specialize in enterprise systems and network administration. My journey has allowed me to develop strong skills in cybersecurity, virtualization and infrastructure management (Windows Server, Linux, PfSense). Rigorous and curious, I constantly seek to improve myself to design efficient, secure and resilient IT environments.',
+hero_btn: 'Discover my technological watch',
+skills_title: 'My Skills', skills_subtitle: 'A set of technical skills acquired during my BTS SIO SISR training',
+skill1_title: 'Network Administration', skill1_desc: 'Configuration of routers, switches, Active Directory and Windows/Linux services',
+skill2_title: 'Cybersecurity', skill2_desc: 'Firewalls, access management, awareness of security best practices',
+skill3_title: 'Web Development', skill3_desc: 'Creation of websites (HTML, CSS, PHP, JavaScript) and administration interfaces',
+skill4_title: 'Databases', skill4_desc: 'Design and administration of MySQL, MariaDB databases',
+skill5_title: 'Project Management', skill5_desc: 'Planning, specifications, Agile method and team collaboration',
+projects_title: 'Completed Projects', projects_subtitle: 'Discover my main technical achievements during my training',
+project1_title: 'Implementation of an Active Directory domain', project1_desc: 'Installation and configuration of a domain controller, management of GPOs and roaming user profiles.',
+project2_title: 'PfSense firewall configuration', project2_desc: 'Perimeter security solution with filtering rules, NAT and VPN for secure remote access.',
+project3_title: 'LAMP Web server deployment', project3_desc: 'Linux, Apache, MySQL, PHP stack. Hosting a dynamic website with database management.',
+exp_title: 'Professional Experience', exp_subtitle: 'My professional journey and academic projects',
+exp1_title: 'Network and Systems Technician (Intern)', exp1_desc: 'User assistance, IT park maintenance, server migration and writing of technical procedures.',
+exp2_title: 'Tutored Project: Security Audit', exp2_desc: 'Infrastructure security audit, identification of vulnerabilities and proposal of remediation plans.',
+watch_title: 'Technological Watch', watch_subtitle: 'Active and structured monitoring on the main themes of modern computing',
+stat1_label: 'Categories followed', stat2_label: 'Topics covered', stat3_label: 'Active sources', stat4_label: 'Of continuous monitoring',
+filter_all: 'All', filter_cyber: 'Cybersecurity', filter_cloud: 'Cloud & Virtualization', filter_sys: 'Systems & Networks', filter_dev: 'Dev & DevOps', filter_ia: 'AI & New Tech',
+cat_cyber: 'Cybersecurity', cat_cloud: 'Cloud & Virtualization', cat_sys: 'Systems & Networks', cat_dev: 'Dev & DevOps', cat_ia: 'AI & New Tech',
+watch1_title: 'The evolution of Ransomware attacks', watch1_sub: 'Threats & Malwares',
+watch1_desc: 'Analysis of new trends in ransomware, notably the <strong>Ransomware-as-a-Service (RaaS)</strong> model. Study of modern defense strategies: immutable backups, network segmentation, Zero Trust and incident response plans.',
+watch2_title: 'Social engineering and next-generation phishing', watch2_sub: 'Human Threats',
+watch2_desc: 'Study of <strong>phishing, spear-phishing and vishing</strong> attacks amplified by generative AI. Analysis of vocal deepfake techniques and targeted campaigns against companies.',
+watch3_title: 'Identity management and Zero Trust', watch3_sub: 'Security Architecture',
+watch3_desc: 'Exploration of the <strong>Zero Trust Architecture (ZTA)</strong> model: "Never trust, always verify". Study of IAM, MFA, SSO and PAM solutions.',
+watch4_title: 'The transition to Hybrid and Multi-Cloud', watch4_sub: 'Cloud Strategies',
+watch4_desc: 'Observation of companies\' strategies combining <strong>On-Premise</strong> infrastructure and Cloud services (Azure, AWS, GCP). Analysis of IaaS, PaaS, SaaS models.',
+watch5_title: 'Containerization with Docker and Kubernetes', watch5_sub: 'Modern Virtualization',
+watch5_desc: 'Study of containerization as an alternative to traditional virtual machines. Comparison <strong>Docker vs VM</strong>, orchestration with Kubernetes.',
+watch6_title: 'The rise of Serverless Computing', watch6_sub: 'Cloud Native',
+watch6_desc: 'Analysis of the <strong>Serverless</strong> model (AWS Lambda, Azure Functions): advantages and limitations. Concrete use cases.',
+watch7_title: 'AI at the service of system administration', watch7_sub: 'AIOps & Automation',
+watch7_desc: 'Study on the use of <strong>artificial intelligence</strong> for automating repetitive tasks and detecting network anomalies.',
+watch8_title: 'The progressive deployment of IPv6', watch8_sub: 'Network Protocols',
+watch8_desc: 'Monitoring of worldwide <strong>IPv6</strong> adoption: state of play, IPv4/IPv6 transition (dual-stack, tunneling).',
+watch9_title: 'CI/CD and modern DevOps pipelines', watch9_sub: 'Deployment Automation',
+watch9_desc: 'Exploration of <strong>DevOps</strong> practices: continuous integration, continuous deployment, Infrastructure as Code with Terraform and Ansible.',
+watch10_title: 'GitOps and configuration management', watch10_sub: 'Infrastructure Management',
+watch10_desc: 'Study of the <strong>GitOps</strong> paradigm: using Git as the single source of truth for infrastructure. Tools like ArgoCD and Flux.',
+watch11_title: 'Generative AI in daily IT', watch11_sub: 'Artificial Intelligence',
+watch11_desc: 'Impact of <strong>generative AI</strong> tools (ChatGPT, Copilot, Claude) on the work of system administrators and developers.',
+watch12_title: 'Edge Computing and industrial IoT', watch12_sub: 'Emerging Technologies',
+watch12_desc: 'Analysis of <strong>Edge Computing</strong>: processing data as close to the source as possible to reduce latency. Applications in industrial IoT.',
+tools_title: 'My Watch Tools', tools_subtitle: 'The tools I use daily to collect, organize and analyze information',
+tool1_desc: 'RSS feed aggregator to follow technical blogs and specialized reviews.',
+tool2_desc: 'Saving and organizing interesting articles for later reading.',
+tool3_desc: 'Following experts and tech communities for real-time information.',
+tool4_desc: 'Technical channels (NetworkChuck, IT-Connect) for tutorials and conferences.',
+tool5_desc: 'Following professionals and IT sector newsletters.',
+tool6_desc: 'Monitoring open source projects and development trends.',
+method_title: 'My Watch Methodology', method_desc: 'A structured approach in 4 steps to transform raw information into exploitable knowledge',
+step1_title: 'Define', step1_desc: 'Selection of strategic themes and relevant keywords for my field (SISR).',
+step2_title: 'Collect', step2_desc: 'Setting up reliable and varied sources: RSS feeds, newsletters, professional social networks.',
+step3_title: 'Analyze', step3_desc: 'Filtering, verification of source reliability and synthesis of relevant information.',
+step4_title: 'Disseminate', step4_desc: 'Sharing knowledge via this portfolio, presentations and technical documentation.',
+contact_title: 'Contact Me', contact_subtitle: 'A question, an opportunity? Don\'t hesitate to contact me',
+contact_info_title: 'Contact Information', contact_location: 'Location',
+contact_form_title: 'Send me a message',
+form_name: 'Full name', form_email: 'Email', form_subject: 'Subject', form_message: 'Message', form_submit: 'Send message'
+},
+ru: {
+nav_home: 'Главная', nav_skills: 'Навыки', nav_projects: 'Проекты', nav_experience: 'Опыт', nav_watch: 'Мониторинг', nav_contact: 'Контакты',
+hero_title: 'Бенджамаин МЕДВЕДЕВ',
+hero_desc: 'Увлеченный информатикой, я превращаю технические вызовы в инновационные решения',
+hero_intro: 'В настоящее время я на 2-м курсе BTS SIO опция SISR в CNED, специализируюсь на администрировании корпоративных систем и сетей. Мой путь позволил мне развить сильные навыки в области кибербезопасности, виртуализации и управления инфраструктурой (Windows Server, Linux, PfSense). Строгий и любознательный, я постоянно стремлюсь совершенствоваться, чтобы проектировать эффективные, безопасные и устойчивые ИТ-среды.',
+hero_btn: 'Узнать о моем мониторинге',
+skills_title: 'Мои навыки', skills_subtitle: 'Набор технических навыков, полученных во время обучения BTS SIO SISR',
+skill1_title: 'Администрирование сетей', skill1_desc: 'Настройка маршрутизаторов, коммутаторов, Active Directory и служб Windows/Linux',
+skill2_title: 'Кибербезопасность', skill2_desc: 'Межсетевые экраны, управление доступом, повышение осведомленности о лучших практиках безопасности',
+skill3_title: 'Веб-разработка', skill3_desc: 'Создание веб-сайтов (HTML, CSS, PHP, JavaScript) и интерфейсов администрирования',
+skill4_title: 'Базы данных', skill4_desc: 'Проектирование и администрирование баз данных MySQL, MariaDB',
+skill5_title: 'Управление проектами', skill5_desc: 'Планирование, технические задания, метод Agile и командная работа',
+projects_title: 'Выполненные проекты', projects_subtitle: 'Откройте для себя мои основные технические достижения во время обучения',
+project1_title: 'Внедрение домена Active Directory', project1_desc: 'Установка и настройка контроллера домена, управление GPO и перемещаемыми профилями пользователей.',
+project2_title: 'Настройка межсетевого экрана PfSense', project2_desc: 'Решение периметральной безопасности с правилами фильтрации, NAT и VPN для безопасного удаленного доступа.',
+project3_title: 'Развертывание веб-сервера LAMP', project3_desc: 'Стек Linux, Apache, MySQL, PHP. Хостинг динамического веб-сайта с управлением базой данных.',
+exp_title: 'Профессиональный опыт', exp_subtitle: 'Мой профессиональный путь и академические проекты',
+exp1_title: 'Техник по сетям и системам (Стажер)', exp1_desc: 'Помощь пользователям, обслуживание ИТ-парка, миграция серверов и написание технических процедур.',
+exp2_title: 'Курсовой проект: Аудит безопасности', exp2_desc: 'Аудит безопасности инфраструктуры, выявление уязвимостей и предложение планов исправления.',
+watch_title: 'Технологический мониторинг', watch_subtitle: 'Активный и структурированный мониторинг основных тем современных вычислений',
+stat1_label: 'Отслеживаемые категории', stat2_label: 'Изученные темы', stat3_label: 'Активные источники', stat4_label: 'Непрерывного мониторинга',
+filter_all: 'Все', filter_cyber: 'Кибербезопасность', filter_cloud: 'Облако и виртуализация', filter_sys: 'Системы и сети', filter_dev: 'Разработка и DevOps', filter_ia: 'ИИ и новые технологии',
+cat_cyber: 'Кибербезопасность', cat_cloud: 'Облако и виртуализация', cat_sys: 'Системы и сети', cat_dev: 'Разработка и DevOps', cat_ia: 'ИИ и новые технологии',
+watch1_title: 'Эволюция атак программ-вымогателей', watch1_sub: 'Угрозы и вредоносное ПО',
+watch1_desc: 'Анализ новых тенденций в области программ-вымогателей, особенно модели <strong>Ransomware-as-a-Service (RaaS)</strong>. Изучение современных стратегий защиты.',
+watch2_title: 'Социальная инженерия и фишинг нового поколения', watch2_sub: 'Человеческие угрозы',
+watch2_desc: 'Изучение атак <strong>фишинга, целевого фишинга и вишинга</strong>, усиленных генеративным ИИ.',
+watch3_title: 'Управление идентификацией и Zero Trust', watch3_sub: 'Архитектура безопасности',
+watch3_desc: 'Изучение модели <strong>Zero Trust Architecture (ZTA)</strong>: "Никогда не доверяй, всегда проверяй".',
+watch4_title: 'Переход на гибридное и мультиоблако', watch4_sub: 'Облачные стратегии',
+watch4_desc: 'Наблюдение за стратегиями компаний, сочетающих <strong>On-Premise</strong> инфраструктуру и облачные сервисы.',
+watch5_title: 'Контейнеризация с Docker и Kubernetes', watch5_sub: 'Современная виртуализация',
+watch5_desc: 'Изучение контейнеризации как альтернативы традиционным виртуальным машинам. Сравнение <strong>Docker vs VM</strong>.',
+watch6_title: 'Расцвет серверных вычислений', watch6_sub: 'Cloud Native',
+watch6_desc: 'Анализ модели <strong>Serverless</strong> (AWS Lambda, Azure Functions): преимущества и ограничения.',
+watch7_title: 'ИИ на службе администрирования систем', watch7_sub: 'AIOps и автоматизация',
+watch7_desc: 'Исследование использования <strong>искусственного интеллекта</strong> для автоматизации повторяющихся задач.',
+watch8_title: 'Прогрессивное развертывание IPv6', watch8_sub: 'Сетевые протоколы',
+watch8_desc: 'Мониторинг мирового внедрения <strong>IPv6</strong>: текущее состояние, переход IPv4/IPv6.',
+watch9_title: 'CI/CD и современные конвейеры DevOps', watch9_sub: 'Автоматизация развертывания',
+watch9_desc: 'Изучение практик <strong>DevOps</strong>: непрерывная интеграция, непрерывное развертывание, инфраструктура как код.',
+watch10_title: 'GitOps и управление конфигурацией', watch10_sub: 'Управление инфраструктурой',
+watch10_desc: 'Изучение парадигмы <strong>GitOps</strong>: использование Git в качестве единого источника истины для инфраструктуры.',
+watch11_title: 'Генеративный ИИ в повседневной ИТ', watch11_sub: 'Искусственный интеллект',
+watch11_desc: 'Влияние инструментов <strong>генеративного ИИ</strong> (ChatGPT, Copilot, Claude) на работу системных администраторов.',
+watch12_title: 'Периферийные вычисления и промышленный IoT', watch12_sub: 'Новые технологии',
+watch12_desc: 'Анализ <strong>Edge Computing</strong>: обработка данных как можно ближе к источнику для снижения задержки.',
+tools_title: 'Мои инструменты мониторинга', tools_subtitle: 'Инструменты, которые я использую ежедневно для сбора, организации и анализа информации',
+tool1_desc: 'Агрегатор RSS-лент для отслеживания технических блогов и специализированных обзоров.',
+tool2_desc: 'Сохранение и организация интересных статей для последующего чтения.',
+tool3_desc: 'Отслеживание экспертов и технических сообществ для получения информации в реальном времени.',
+tool4_desc: 'Технические каналы (NetworkChuck, IT-Connect) для учебных пособий и конференций.',
+tool5_desc: 'Отслеживание профессионалов и новостных рассылок ИТ-сектора.',
+tool6_desc: 'Мониторинг проектов с открытым исходным кодом и тенденций разработки.',
+method_title: 'Моя методология мониторинга', method_desc: 'Структурированный подход в 4 этапа для преобразования сырой информации в полезные знания',
+step1_title: 'Определить', step1_desc: 'Выбор стратегических тем и соответствующих ключевых слов для моей области (SISR).',
+step2_title: 'Собрать', step2_desc: 'Настройка надежных и разнообразных источников: RSS-ленты, информационные бюллетени.',
+step3_title: 'Анализировать', step3_desc: 'Фильтрация, проверка надежности источников и синтез соответствующей информации.',
+step4_title: 'Распространять', step4_desc: 'Обмен знаниями через это портфолио, презентации и техническую документацию.',
+contact_title: 'Свяжитесь со мной', contact_subtitle: 'Вопрос, возможность? Не стесняйтесь связаться со мной',
+contact_info_title: 'Контактная информация', contact_location: 'Местоположение',
+contact_form_title: 'Отправьте мне сообщение',
+form_name: 'Полное имя', form_email: 'Email', form_subject: 'Тема', form_message: 'Сообщение', form_submit: 'Отправить сообщение'
+}
+};
+
+let currentLang = localStorage.getItem('lang') || 'fr';
+
+function changeLanguage(lang) {
+currentLang = lang;
+localStorage.setItem('lang', lang);
+document.documentElement.lang = lang;
+const elements = document.querySelectorAll('[data-i18n]');
+elements.forEach(el => {
+const key = el.getAttribute('data-i18n');
+if (translations[lang][key]) {
+el.innerHTML = translations[lang][key];
+}
+});
+const langBtn = document.getElementById('lang-toggle');
+langBtn.innerHTML = `<i class="fas fa-globe"></i> ${lang === 'fr' ? 'EN' : (lang === 'en' ? 'RU' : 'FR')}`;
+document.getElementById('statusLang').textContent = lang.toUpperCase();
+}
+
+changeLanguage(currentLang);
+
+const langToggle = document.getElementById('lang-toggle');
+langToggle.addEventListener('click', () => {
+const newLang = currentLang === 'fr' ? 'en' : (currentLang === 'en' ? 'ru' : 'fr');
+changeLanguage(newLang);
+});
+
+// ============================================
+// FILTRES DE VEILLE
+// ============================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const veilleCards = document.querySelectorAll('.veille-card');
+filterBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+filterBtns.forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+const filter = btn.getAttribute('data-filter');
+veilleCards.forEach(card => {
+if (filter === 'all' || card.getAttribute('data-category') === filter) {
+card.classList.remove('hidden');
+card.style.animation = 'fadeIn 0.5s ease-in-out';
+} else {
+card.classList.add('hidden');
+}
+});
+});
+});
+
+// ============================================
+// ANIMATIONS AU SCROLL
+// ============================================
+function checkScrollAnimations() {
+const elements = document.querySelectorAll('.fade-in');
+elements.forEach(element => {
+const elementTop = element.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+if (elementTop < windowHeight - 100) element.classList.add('visible');
+});
+}
+window.addEventListener('scroll', checkScrollAnimations);
+window.addEventListener('load', checkScrollAnimations);
+
+// ============================================
+// RETURN TO TOP
+// ============================================
+const returnTop = document.getElementById('returnTop');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 400) {
+returnTop.classList.add('visible');
+} else {
+returnTop.classList.remove('visible');
+}
+});
+returnTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============================================
+// UPTIME & STATUS PANEL
+// ============================================
+const siteStartTime = Date.now();
+const statusUptime = document.getElementById('statusUptime');
+const uptimeBadge = document.getElementById('uptimeBadge');
+
+setInterval(() => {
+const uptime = Math.floor((Date.now() - siteStartTime) / 1000);
+const h = Math.floor(uptime / 3600);
+const m = Math.floor((uptime % 3600) / 60);
+const s = uptime % 60;
+const uptimeStr = `${h}h ${m}m ${s}s`;
+statusUptime.textContent = uptimeStr;
+uptimeBadge.textContent = `⚡ Site uptime: ${uptimeStr}`;
+}, 1000);
+
+// ============================================
+// DASHBOARD SYSTÈME TEMPS RÉEL
+// ============================================
+function updateDashboard() {
+const cpu = Math.floor(Math.random() * 40) + 20;
+const ram = Math.floor(Math.random() * 30) + 40;
+const net = Math.floor(Math.random() * 50) + 10;
+const threats = Math.floor(Math.random() * 5);
+
+document.getElementById('cpuValue').textContent = cpu + '%';
+document.getElementById('cpuBar').style.width = cpu + '%';
+
+document.getElementById('ramValue').textContent = ram + '%';
+document.getElementById('ramBar').style.width = ram + '%';
+
+document.getElementById('netValue').textContent = net + ' Mb/s';
+document.getElementById('netBar').style.width = (net / 100 * 100) + '%';
+
+document.getElementById('threatsValue').textContent = threats;
+document.getElementById('threatsBar').style.width = (threats / 10 * 100) + '%';
+}
+
+updateDashboard();
+setInterval(updateDashboard, 2000);
+
+// ============================================
+// THREAT COUNTER ANIMÉ
+// ============================================
+let threatCount = 1337;
+const threatNumber = document.getElementById('threatNumber');
+const threatsValue = document.getElementById('threatsValue');
+
+setInterval(() => {
+threatCount += Math.floor(Math.random() * 3);
+threatNumber.textContent = threatCount.toLocaleString();
+}, 3000);
+
+// ============================================
+// LIVE LOGS
+// ============================================
+const logMessages = [
+{ msg: 'Firewall rule updated', type: 'success' },
+{ msg: 'SSH connection from 192.168.1.42', type: 'info' },
+{ msg: 'Backup completed successfully', type: 'success' },
+{ msg: 'Failed login attempt blocked', type: 'warn' },
+{ msg: 'Network scan detected', type: 'warn' },
+{ msg: 'SSL certificate renewed', type: 'success' },
+{ msg: 'DNS query resolved', type: 'info' },
+{ msg: 'Intrusion attempt blocked', type: 'error' },
+{ msg: 'System update available', type: 'info' },
+{ msg: 'Port 22 access denied', type: 'warn' },
+{ msg: 'Database backup completed', type: 'success' },
+{ msg: 'Anomaly detected in traffic', type: 'warn' },
+];
+
+let logCount = 0;
+const logsContent = document.getElementById('logsContent');
+const logCountEl = document.getElementById('logCount');
+
+function addLog() {
+const log = logMessages[Math.floor(Math.random() * logMessages.length)];
+const now = new Date();
+const time = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+
+const entry = document.createElement('div');
+entry.className = 'log-entry ' + log.type;
+entry.innerHTML = `<span class="log-time">[${time}]</span><span class="log-msg">${log.msg}</span>`;
+
+logsContent.insertBefore(entry, logsContent.firstChild);
+logCount++;
+logCountEl.textContent = logCount + ' entries';
+
+if (logsContent.children.length > 20) {
+logsContent.removeChild(logsContent.lastChild);
+}
+}
+
+function startLiveLogs() {
+addLog();
+setInterval(addLog, 3000 + Math.random() * 2000);
+}
+
+// ============================================
+// ACHIEVEMENTS SYSTEM
+// ============================================
+const achievements = [
+{ id: 'explorer', name: 'Explorer', desc: 'Tape "whoami" dans le terminal', icon: '🔍', unlocked: false },
+{ id: 'hacker', name: 'First Hack', desc: 'Réussis le mini-jeu hack', icon: '💻', unlocked: false },
+{ id: 'konami', name: 'Konami Master', desc: 'Trouve le code Konami', icon: '', unlocked: false },
+{ id: 'sudo', name: 'Sudo User', desc: 'Tape "sudo" dans le terminal', icon: '🔐', unlocked: false },
+{ id: 'polyglot', name: 'Polyglot', desc: 'Change la langue 3 fois', icon: '', unlocked: false },
+{ id: 'nightowl', name: 'Night Owl', desc: 'Active le mode sombre', icon: '', unlocked: false },
+{ id: 'explorer2', name: 'Deep Explorer', desc: 'Visite 4 onglets différents', icon: '🗺️', unlocked: false },
+{ id: 'curious', name: 'Curious Mind', desc: 'Ouvre le panneau achievements', icon: '🏆', unlocked: false },
+];
+
+let langChangeCount = 0;
+let visitedTabs = new Set(['accueil']);
+
+function unlockAchievement(id) {
+const ach = achievements.find(a => a.id === id);
+if (ach && !ach.unlocked) {
+ach.unlocked = true;
+showToast('Achievement Unlocked!', `${ach.icon} ${ach.name}`, 'success');
+updateAchievementsPanel();
+}
+}
+
+function updateAchievementsPanel() {
+const list = document.getElementById('achievementsList');
+list.innerHTML = '';
+let unlockedCount = 0;
+
+achievements.forEach(ach => {
+if (ach.unlocked) unlockedCount++;
+const div = document.createElement('div');
+div.className = 'achievement-badge ' + (ach.unlocked ? 'unlocked' : 'locked');
+div.innerHTML = `
+<div class="achievement-icon">${ach.icon}</div>
+<div class="achievement-info">
+<div class="achievement-name">${ach.name}</div>
+<div class="achievement-desc">${ach.desc}</div>
+</div>
+`;
+list.appendChild(div);
+});
+
+document.getElementById('badgeCount').textContent = unlockedCount;
+document.getElementById('statusAchievements').textContent = `${unlockedCount}/${achievements.length}`;
+}
+
+updateAchievementsPanel();
+
+const achievementsToggle = document.getElementById('achievementsToggle');
+const achievementsPanel = document.getElementById('achievementsPanel');
+
+achievementsToggle.addEventListener('click', () => {
+achievementsPanel.classList.toggle('active');
+unlockAchievement('curious');
+});
+
+// Track tab visits
+tabLinks.forEach(link => {
+link.addEventListener('click', () => {
+const tab = link.getAttribute('data-tab');
+visitedTabs.add(tab);
+if (visitedTabs.size >= 4) {
+unlockAchievement('explorer2');
+}
+});
+});
+
+// Track language changes
+const originalChangeLanguage = changeLanguage;
+changeLanguage = function(lang) {
+originalChangeLanguage(lang);
+langChangeCount++;
+if (langChangeCount >= 3) {
+unlockAchievement('polyglot');
+}
+};
+
+// Track theme changes
+const originalThemeToggle = themeToggle.onclick;
+themeToggle.addEventListener('click', () => {
+setTimeout(() => {
+if (document.body.classList.contains('light-mode') === false) {
+unlockAchievement('nightowl');
+}
+}, 100);
+});
+
+// ============================================
+// TOAST NOTIFICATIONS
+// ============================================
+function showToast(title, message, type = 'info') {
+const container = document.getElementById('toastContainer');
+const toast = document.createElement('div');
+toast.className = 'toast ' + type;
+
+const icons = {
+success: 'fa-check-circle',
+warning: 'fa-exclamation-triangle',
+error: 'fa-times-circle',
+info: 'fa-info-circle'
+};
+
+toast.innerHTML = `
+<i class="fas ${icons[type]} toast-icon"></i>
+<div class="toast-content">
+<div class="toast-title">${title}</div>
+<div class="toast-message">${message}</div>
+</div>
+`;
+
+container.appendChild(toast);
+setTimeout(() => toast.remove(), 4500);
+}
+
+// Welcome toast after boot
+setTimeout(() => {
+showToast('System Ready', 'Portfolio loaded successfully. Type "help" in the terminal!', 'success');
+}, 3000);
+
+// Random toasts
+const randomToasts = [
+{ title: 'Security Alert', message: 'Firewall active. 0 threats detected.', type: 'info' },
+{ title: 'System Update', message: 'All modules up to date.', type: 'success' },
+{ title: 'Network Status', message: 'Connection stable. Latency: 12ms', type: 'info' },
+];
+
+setTimeout(() => {
+setInterval(() => {
+if (Math.random() > 0.7) {
+const toast = randomToasts[Math.floor(Math.random() * randomToasts.length)];
+showToast(toast.title, toast.message, toast.type);
+}
+}, 15000);
+}, 10000);
+
+// ============================================
+// ASCII ART FOOTER
+// ============================================
+const asciiArt = `
+  ╔═══════════════════════════════════════╗
+  ║  [SYSTEM] Portfolio loaded successfully ║
+    [STATUS] All services operational     ║
+  ║  [AUTH]   Benjamin MEDVEDEV © 2026    ║
+  ╚═══════════════════════════════════════╝
+`;
+document.getElementById('footerAscii').textContent = asciiArt;
+
+// ============================================
+// CONSOLE EASTER EGG
+// ============================================
+console.log('%c╔══════════════════════════════════════╗', 'color: #00ff88; font-family: monospace;');
+console.log('%c║  Hello, curious developer! 👋        ║', 'color: #00ff88; font-family: monospace;');
+console.log('%c║  Looking at the source code?         ║', 'color: #00ff88; font-family: monospace;');
+console.log('%c║  You\'re my kind of person.           ║', 'color: #00ff88; font-family: monospace;');
+console.log('%c║  Contact: benjamin.medvedev@email    ║', 'color: #00d4ff; font-family: monospace;');
+console.log('%c╚══════════════════════════════════════╝', 'color: #00ff88; font-family: monospace;');
+console.log('%cTry the Konami Code: ↑↑↓↓←→←→BA', 'color: #ff79c6; font-family: monospace; font-size: 14px;');
+console.log('%cOr type "hack" in the terminal for a mini-game!', 'color: #ffa502; font-family: monospace; font-size: 14px;');
+</script>
+</body>
+</html>
